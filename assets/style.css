@@ -14,6 +14,7 @@ form {
 }
 /* big buttons liks submit or get started */
 .bigButtons {
+background-size: auto;
   background-color: rgba(0, 160, 209, 0.644);
   padding: 0 15px;
   border-radius: 7px;
@@ -24,10 +25,9 @@ form {
 /* first page styling */
 .firstPage {
     /* dont know how to scale background */
-  max-width: 100%;
-  height: auto;
   background-image: url(images/doctors-keyboard.jpg);
   background-repeat: no-repeat, repeat;
+  background-size:100%;
   height: 680px;
 }
 /* box with language settings */
@@ -63,7 +63,7 @@ form {
   bottom: 400px;
 }
 .main-section {
-  margin-top: 120px;
+  margin-top: 50px;
 }
 /* second page search bar */
 .secondPage {
@@ -73,3 +73,18 @@ form {
 .addPadding {
   padding-top: 20px;
 }
+@media only screen and (max-width: 941px ) {
+    .firstPage {
+        /* dont know how to scale background */
+      
+      height: auto;
+      background-image: url(images/doctors-keyboard.jpg);
+      background-repeat: no-repeat, repeat;
+      background-size: initial;
+      /* background-size:; */
+    }
+    .centerText{
+        margin-bottom: 100px;
+    }
+}
+      
