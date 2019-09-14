@@ -1,20 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-   
-    <!-- Compiled and minified JavaScript -->
+    <!-- googoo fonts -->
+    <link href="https://fonts.googleapis.com/css?family=ABeeZee:400i|Prompt:300i&display=swap" rel="stylesheet">
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <!--JavaScript for materialize -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <!-- Compiled and minified CSS -->
+    <!-- materialized icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- materialized css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    
+    <!-- our css -->
     <link rel="stylesheet" href="assets/style.css">
 </head>
+
 <body>
+    <div id="homePage" class="firstPage ">
+        <div class="container">
+            <!--Languege Nav Bar -->
+            <header>
+                <div class="row navbox ">
+                    <div class="col s6">
+                        <a class="nav_link link-green waves-effect waves-light" href="#">EN</a>
+                        <a class="nav_link link-yellow waves-effect waves-light" href="#">ES</a>
+                        <a class="nav_link link-red waves-effect waves-light" href="#">中文</a>
+                    </div>
+                </div>
+            </header>
+            <!-- section with slogan -->
+            <section class="main-section">
+                <div class="row">
+                    <div class="col s6 offset-s2">
+                        <div class="centerText">
+                            <h1>Welcome</h1>
+                            <h3>Welcome to a Healthier World
+                                One Patient At a Time</h3>
+                            <a class="bigButtons waves-effect waves-light btn-large " href="#getStarted"><i
+                                    class="material-icons right">expand_more</i>Get started</a>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        </section>
+    </div>
+    <!-- second page -->
+    <div id="getStarted" class="secondPage ">
+        <div class="container ">
+            <h1 class="addPadding">Choose your doctor here</h1>
+            <div class="row">
+                <div class="col s8 ">
+                    <div class="row">
+                        <!-- search form starts here -->
+                        <form class="col s12">
+                            <!-- search by location -->
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input id="input_text" type="text" data-length="30">
+                                    <label for="input_text">Search by location</label>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="input-field col s12">
+                            <select>
+                                <option value="#"></option>
+                                <option value="1">Option 1</option>
+                                <option value="2">Option 2</option>
+                                <option value="3">Option 3</option>
+                            </select>
+                            <label id="lable">Choose specialities</label>
+                        </div>
+                        <!-- search form ends here -->
+                        <!-- Submit search button -->
+                        <a class="bigButtons waves-effect waves-light btn-large submit-search"><i
+                                class="material-icons right">sort</i>Submit</a>
+                    </div>
+                </div>
+                <!-- doctor picture next to search -->
+                <div class="col s4">
+                    <img class="responsive-img " src="assets/images/doctor.png" alt="doctor picture">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- fixed button menu, drop on hover, tooltip added, operted by script -->
+    <div class="fixed-action-btn">
+        <a class="btn-floating btn-large  blue lighten-1">
+            <i class="large material-icons">menu</i>
+        </a>
+        <ul>
+            <li><a href="#homePage" class="btn-floating red btn tooltipped" data-position="right" data-tooltip="Home"><i
+                        class="material-icons">home</i></a></li>
+            <li><a href="#getStarted" class="btn-floating yellow darken-1 btn tooltipped" data-position="right"
+                    data-tooltip="Search"><i class="material-icons">search</i></a></li>
+            <li><a href="" class="btn-floating green btn tooltipped" data-position="right" data-tooltip="Favourite"><i
+                        class="material-icons">favorite</i></a></li>
+            <li><a href="" class="btn-floating  blue btn tooltipped" data-position="right" data-tooltip="Contact us"><i
+                        class="material-icons">markunread</i></a></li>
+        </ul>
+    </div>
+    <!-- our javascript -->
     <script src="assets/javascript/doc.js"></script>
+    <!-- our translate javascript -->
     <script src="assets/javascript/translate.js"></script>
 </body>
+
 </html>

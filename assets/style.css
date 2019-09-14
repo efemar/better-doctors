@@ -1,0 +1,75 @@
+body {
+  font-size: 18px;
+}
+/* this part centers text u can use it whenever needed */
+.centerText {
+  text-align: center;
+}
+/* headings and form will have cursive font diferent from main text */
+h1,
+h2,
+h3,
+form {
+  font-family: "Prompt", sans-serif;
+}
+/* big buttons liks submit or get started */
+.bigButtons {
+  background-color: rgba(0, 160, 209, 0.644);
+  padding: 0 15px;
+  border-radius: 7px;
+}
+.bigButtons:hover {
+  background-color: #009fd1;
+}
+/* first page styling */
+.firstPage {
+    /* dont know how to scale background */
+  max-width: 100%;
+  height: auto;
+  background-image: url(images/doctors-keyboard.jpg);
+  background-repeat: no-repeat, repeat;
+  height: 680px;
+}
+/* box with language settings */
+.navbox {
+  padding-top: 20px;
+  max-height: 50px;
+}
+.nav_link {
+  line-height: 25px;
+  display: inline-block;
+  padding: 4px;
+  text-align: center;
+  border-radius: 15px;
+  color: rgba(0, 0, 0, 0.671);
+  transition: 0.2s ease-in-out;
+}
+.nav_link:hover {
+  font-size: 23px;
+  color: rgb(231, 123, 52);
+  text-shadow: 0.4px 0.4px #2c2b2a;
+}
+.link-green:hover {
+  color: rgba(87, 165, 68, 0.65);
+  text-shadow: 0.4px 0.4px #2c2b2a;
+}
+.link-red:hover {
+  color: rgba(236, 57, 57, 0.726);
+  text-shadow: 0.4px 0.4px #2c2b2a;
+}
+/* this position fixed menu, need to add @media because not visible on little screens */
+.fixed-action-btn {
+  right: 1200px; /*desired value*/
+  bottom: 400px;
+}
+.main-section {
+  margin-top: 120px;
+}
+/* second page search bar */
+.secondPage {
+  height: 630px;
+}
+/* added so when 'getstarted' clicked, our page scoll stops with some space on top */
+.addPadding {
+  padding-top: 20px;
+}
