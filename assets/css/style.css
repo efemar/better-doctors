@@ -4,6 +4,8 @@ body {
 /* this part centers text u can use it whenever needed */
 .centerText {
   text-align: center;
+  margin-top: 190px;
+  margin-left: 280px;
 }
 /* headings and form will have cursive font diferent from main text */
 h1,
@@ -25,7 +27,7 @@ background-size: auto;
 /* first page styling */
 .firstPage {
     /* dont know how to scale background */
-  background-image: url(images/doctors-keyboard.jpg);
+  background-image: url(../images/doctors-keyboard.jpg);
   background-repeat: no-repeat, repeat;
   background-size:100%;
   height: 680px;
@@ -59,8 +61,8 @@ background-size: auto;
 }
 /* this position fixed menu, need to add @media because not visible on little screens */
 .fixed-action-btn {
-  right: 1200px; /*desired value*/
-  bottom: 400px;
+  right: 10px; /*desired value*/
+  bottom: 10px;
 }
 .main-section {
   margin-top: 50px;
@@ -84,7 +86,7 @@ background-size: auto;
       /* background-size:; */
     }
     .centerText{
-        margin-bottom: 100px;
+        margin-bottom: 200px;
     }
 }
       
