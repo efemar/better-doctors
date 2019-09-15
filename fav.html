@@ -1,20 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-   
-    <!-- Compiled and minified JavaScript -->
+    <title>Favorite</title>
+    <!-- googoo fonts -->
+    <link href="https://fonts.googleapis.com/css?family=ABeeZee:400i|Prompt:300i&display=swap" rel="stylesheet">
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <!--JavaScript for materialize -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <!-- Compiled and minified CSS -->
+    <!-- materialized icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- materialized css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    
+    <!-- our css -->
     <link rel="stylesheet" href="assets/style.css">
+
+    <style>
+        .btn {
+            float: right;
+            top: 5px;
+            right: 5px;
+            
+        }
+    </style>
 </head>
+
 <body>
+
+    <!-- add and remove favorite buttons 
+    <a href="" class="btn-floating green btn tooltipped waves-effect waves-light" data-position="right"
+        data-tooltip="Add to Favorites"><i class="material-icons">favorite</i></a>
+    <a href="" class="btn-floating red btn tooltipped waves-effect waves-light" data-position="right"
+        data-tooltip="Remove from Favorites"><i class="material-icons">delete</i></a>
+    -->
+
+    <!-- Favorite Page -->
+    <div id="getStarted" class="third-page blue lighten-5">
+        <div class="container">
+            <div class="row ">
+                <div class="col l12 m12 s12">
+                    <h1>Your Favorites</h1>
+                </div>
+                <div class="row">
+                    <!--First Card-->
+                    <div class="col l4 m12 s12">
+                        <div class="card small">
+                            <a href="" class="btn-floating red btn tooltipped waves-effect waves-light"
+                                data-position="right" data-tooltip="Remove from Favorites"><i
+                                    class="material-icons">delete</i></a>
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="assets/images/Doctor.png">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator grey-text text-darken-4">Card Title<i
+                                        class="material-icons right">more_vert</i></span>
+                                <p><a href="#">This is a link</a></p>
+                            </div>
+
+                            <div class="card-reveal">
+                                <span class="card-title grey-text text-darken-4">Card Title<i
+                                        class="material-icons right">close</i></span>
+                                <p>Here is some more information about this product that is only revealed once clicked
+                                    on.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Second Card-->
+                    <div class="col l4 m12 s12">
+                        <div class="card small">
+                                <a href="" class="btn-floating red btn tooltipped waves-effect waves-light"
+                                data-position="right" data-tooltip="Remove from Favorites"><i
+                                    class="material-icons">delete</i></a>
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="assets/images/Doctor.png">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator grey-text text-darken-4">Card Title<i
+                                        class="material-icons right">more_vert</i></span>
+                                <p><a href="#">This is a link</a></p>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title grey-text text-darken-4">Card Title<i
+                                        class="material-icons right">close</i></span>
+                                <p>Here is some more information about this product that is only revealed once clicked
+                                    on.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Third Card-->
+                    <div class="col l4 m12 s12">
+                        <div class="card small">
+                                <a href="" class="btn-floating red btn tooltipped waves-effect waves-light"
+                                data-position="right" data-tooltip="Remove from Favorites"><i
+                                    class="material-icons">delete</i></a>
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="assets/images/Doctor.png">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator grey-text text-darken-4">Card Title<i
+                                        class="material-icons right">more_vert</i></span>
+                                <p><a href="#">This is a link</a></p>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title grey-text text-darken-4">Card Title<i
+                                        class="material-icons right">close</i></span>
+                                <p>Here is some more information about this product that is only revealed once clicked
+                                    on.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Footer-->
+    <footer class="page-footer amber lighten-5">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <p class="grey-text text-darken-2">ConnectDoc is a product & service by CodingElite LLC, a
+                        fictitious company created by some cheeky software developers</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <ul>
+                        <li><a class="grey-text text-darken-2" href="#!">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
     <script src="assets/javascript/doc.js"></script>
     <script src="assets/javascript/translate.js"></script>
+
+    <script>
+
+        $(document).ready(function () {
+            $('.btn-floating').floatingActionButton("direct", "right");
+        });
+    </script>
 </body>
+
 </html>
