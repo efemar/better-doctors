@@ -7,6 +7,7 @@ body {
   margin-top: 190px;
   margin-left: 280px;
 }
+
 /* headings and form will have cursive font diferent from main text */
 h1,
 h2,
@@ -35,6 +36,7 @@ background-size: auto;
 /* box with language settings */
 .navbox {
   padding-top: 20px;
+  margin-left: -200px;
   max-height: 50px;
 }
 .nav_link {
