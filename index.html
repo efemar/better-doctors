@@ -47,7 +47,7 @@
                     <ul id="nav-mobile" class="left hide-on-med-and-down">
                         <li><a id="english" value="EN" href="#">EN</a></li>
                         <li><a id="spanish" value="ES" href="#">ES</a></li>
-                        <li><a id="chinese" value="FR" href="#">FR</a></li>
+                        <li><a id="french" value="FR" href="#">FR</a></li>
                     </ul>
                     <!-- Navigation Links -->
                     <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
@@ -101,20 +101,34 @@
                             <div class="row">
                                 <div class="input-field col s12">
                                     <input id="input_text" type="text" data-length="30">
-                                    <label for="input_text">Zip Code</label>
+                                    <label  for="input_text"><span id="ast">* </span> Your Location in format "CA-Berkeley"</label>
                                 </div>
                             </div>
                         </form>
                         <!-- specialty input -->
                         <div class="row">
                             <div class="input-field col s12">
-                                <select>
-                                    <option value="#"></option>
-                                    <option value="1">Option 1</option>
-                                    <option value="2">Option 2</option>
-                                    <option value="3">Option 3</option>
+                                <select >
+                                    <option ></option>
+                                    <option  data-uid="dentist">Dentist</option>
+                                    <option  data-uid="ophthalmologist">Ophthalmologist</option>
+                                    <option  data-uid="optometrist">Optometrist</option>
+                                    <option  data-uid="gynecologist">Gynecologist</option>
+                                    <option  data-uid="dermatologist">Dermatologist</option>
+                                    <option  data-uid="anesthesiologist">Anesthesiologist</option>
+                                    <option  data-uid="allergist">Allergist</option>
+                                    <option  data-uid="psychologist">Psychologist</option>
+                                    <option  data-uid="neurologist">Neurologist</option>
+                                    <option  data-uid="orthodontist">Orthodontist</option>
+                                    <option  data-uid="endocrinologist">Endocrinologist</option>
+                                    <option  data-uid="pediatrician">Pediatrician</option>
+                                    <option  data-uid="optometrist">Optometrist</option>
+                                    <option  data-uid="gastroenterologist">Gastroenterologist</option>
+                                    <option  data-uid="pulmonologist">Pulmonologist</option>
+                                    <option  data-uid="cardiologist">Cardiologist</option>
+                                    <option  data-uid="chiropractor">Chiropractor</option>
                                 </select>
-                                <label id="lable">Choose Specialities</label>
+                                <label class="label">Choose Specialities</label>
                             </div>
                         </div>
                         <!-- Language input -->
@@ -122,11 +136,11 @@
                             <div class="input-field col s12">
                                 <select>
                                     <option value="#"></option>
-                                    <option value="1">English</option>
-                                    <option value="2">Spanish (Español)</option>
-                                    <option value="3">Chinese (中文)</option>
+                                    <option value="EN">English</option>
+                                    <option value="ES">Spanish (Español)</option>
+                                    <option value="FR">French (Français)</option>
                                 </select>
-                                <label id="lable">Choose Language</label>
+                                <label class="label">Choose Language</label>
                             </div>
                         </div>
 
@@ -135,10 +149,10 @@
                             <div class="input-field col s12">
                                 <div class="switch">
                                     <label>
-                                        Male
+                                        <span class="gender">Male</span>
                                         <input type="checkbox">
                                         <span class="lever"></span>
-                                        Female
+                                        <span class="gender">Female</span>
                                     </label>
                                 </div>
                             </div>
@@ -153,10 +167,6 @@
                         </div>
                     </div>
                     <!-- column with doctor picture -->
-                    <!--TO DO: find picure with a female doctor-->
-                    <!-- <div class="col m5 l4 s12">
-                        <img class="responsive-img " src="assets/images/doctor.png" alt="doctor picture">
-                    </div> -->
                     <div class="col m5 l4 s12">
                             <img class="responsive-img " src="assets/images/female-doctor.png" alt="doctor picture">
                         </div>
