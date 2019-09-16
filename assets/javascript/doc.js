@@ -1,7 +1,4 @@
 // initializing float menu button, and its setup
-$(document).ready(function () {
-    $(".fixed-action-btn").floatingActionButton();
-});
 document.addEventListener("DOMContentLoaded", function () {
     var elems = document.querySelectorAll(".fixed-action-btn");
     var instances = M.FloatingActionButton.init(elems, {
@@ -52,6 +49,14 @@ $(document).ready(function () {
     $('select').formSelect();
 });
 //-------------------------------------------------------------------------
+<<<<<<< HEAD
+//initializing side nav bar on small screen
+$(document).ready(function(){
+    $('.sidenav').sidenav();
+  });
+//-------------------------------------------------------------------------
+$("#submit").on("click", function () {
+=======
 // initializing float menu button, and its setup
 $(document).ready(function () {
     $(".fixed-action-btn").floatingActionButton();
@@ -108,6 +113,7 @@ $(document).ready(function () {
 //-------------------------------------------------------------------------
 $("#submit").on("click", function (event) {
     event.preventDefault();
+>>>>>>> 863cbe0b07e858b5d35f31a4ded76fc7c3470154
     var gender;
     var location;
     var specID;

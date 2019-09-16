@@ -18,7 +18,7 @@
     <!-- materialized css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <!-- our css -->
-    
+
     <link rel="stylesheet" href="assets/css/style.css">
     <style>
         .card {
@@ -40,25 +40,36 @@
     <!-- first page -->
     <div id="homePage" class="firstPage ">
         <!-- Navigation bar -->
-            <nav class=" navigation">
-                    <div class="container">
-                        <div class="nav-wrapper ">
-                            <!-- Language links -->
-                                <ul id="nav-mobile" class="left hide-on-med-and-down">
-                                        <li><a id="english" value="EN" href="#">EN</a></li>
-                                        <li><a id="spanish" value="ES" href="#">ES</a></li>
-                                        <li><a id="chinese" value="FR" href="#">FR</a></li>                       
-                                      </ul>
-                                      <!-- Navigation Links -->
-                          <ul id="nav-mobile" class="right hide-on-med-and-down">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Favourite</a></li>
-                            <li><a href="#getStarted">Search</a></li>
-                            <li><a href="#">Contact</a></li>
-                          </ul>
-                        </div>
-                    </div>
-                      </nav>
+        <nav class=" navigation">
+            <div class="container">
+                <div class="nav-wrapper ">
+                    <!-- Language links -->
+                    <ul id="nav-mobile" class="left hide-on-med-and-down">
+                        <li><a id="english" value="EN" href="#">EN</a></li>
+                        <li><a id="spanish" value="ES" href="#">ES</a></li>
+                        <li><a id="chinese" value="FR" href="#">FR</a></li>
+                    </ul>
+                    <!-- Navigation Links -->
+                    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                    <ul id="nav-mobile" class="right hide-on-med-and-down">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Favourite</a></li>
+                        <li><a href="#getStarted">Search</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                    <ul class="sidenav" id="mobile-demo">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Favourite</a></li>
+                        <li><a href="#getStarted">Search</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <hr>
+                        <li><a id="english" value="EN" href="#">EN</a></li>
+                        <li><a id="spanish" value="ES" href="#">ES</a></li>
+                        <li><a id="chinese" value="FR" href="#">FR</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
         <div class="container">
             <!-- section with slogan -->
             <section class="main-section">
@@ -67,7 +78,7 @@
                         <div class="centerText">
                             <h1>Welcome to a Healthier World</h1>
                             <h3>One Patient At a Time</h3>
-                            <a class="bigButtons waves-effect waves-light btn-large "  href="#getStarted"><i
+                            <a class="bigButtons waves-effect waves-light btn-large " href="#getStarted"><i
                                     class="material-icons right">expand_more</i>Connect with your Doctor</a>
                         </div>
                     </div>
@@ -84,7 +95,7 @@
                 </div>
                 <div class="row">
                     <!-- search colomn -->
-                    <div class="col l7 m7 s12">
+                    <div class="col l8 m7 s12">
                         <!-- location input -->
                         <form>
                             <div class="row">
@@ -143,9 +154,12 @@
                     </div>
                     <!-- column with doctor picture -->
                     <!--TO DO: find picure with a female doctor-->
-                    <div class="col m5 l5 s12">
+                    <!-- <div class="col m5 l4 s12">
                         <img class="responsive-img " src="assets/images/doctor.png" alt="doctor picture">
-                    </div>
+                    </div> -->
+                    <div class="col m5 l4 s12">
+                            <img class="responsive-img " src="assets/images/female-doctor.png" alt="doctor picture">
+                        </div>
                 </div>
             </div>
         </div>
@@ -157,7 +171,7 @@
                 <div class="col l12 m12 s12">
                     <h1>Your Matches</h1>
                 </div>
-                <div id= "doctor-cards" class="row">
+                <div id="doctor-cards" class="row">
                     <!--First Card-->
                     <div class="col l4 m12 s12">
                         <div class="card small">
@@ -221,7 +235,7 @@
     </div>
 
     <!-- fixed button menu, drop on hover, tooltip added, operted by script -->
-    
+
     <div class="fixed-action-btn m1 s1">
         <a class="btn-floating btn-large  blue lighten-1">
             <i class="large material-icons">menu</i>
@@ -240,21 +254,22 @@
 
     <!--Footer-->
     <footer class="page-footer amber lighten-5">
-            <div class="container">
-              <div class="row">
+        <div class="container">
+            <div class="row">
                 <div class="col l6 s12">
-                   <p class="grey-text text-darken-2">ConnectDoc is a product & service by CodingElite LLC, a fictitious company created by some cheeky software developers</p>
+                    <p class="grey-text text-darken-2">ConnectDoc is a product & service by CodingElite LLC, a
+                        fictitious company created by some cheeky software developers</p>
                 </div>
                 <div class="col l4 offset-l2 s12">
-                  <ul>
-                    <li><a class="grey-text text-darken-2" href="#!">Terms & Conditions</a></li>
-                  </ul>
+                    <ul>
+                        <li><a class="grey-text text-darken-2" href="#!">Terms & Conditions</a></li>
+                    </ul>
                 </div>
-              </div>
             </div>
-          </footer>
+        </div>
+    </footer>
     <!-- our javascript -->
-   <script src= "assets/javascript/doc.js"></script>
+    <script src="assets/javascript/doc.js"></script>
     <!-- our translate javascript -->
     <script src="assets/javascript/translate.js"></script>
 </body>
