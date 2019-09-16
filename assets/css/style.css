@@ -4,10 +4,7 @@ body {
 /* this part centers text u can use it whenever needed */
 .centerText {
   text-align: center;
-  margin-top: 190px;
-  margin-left: 280px;
 }
-
 /* headings and form will have cursive font diferent from main text */
 h1,
 h2,
@@ -36,7 +33,6 @@ background-size: auto;
 /* box with language settings */
 .navbox {
   padding-top: 20px;
-  margin-left: -200px;
   max-height: 50px;
 }
 .nav_link {
@@ -79,12 +75,10 @@ background-size: auto;
 }
 @media only screen and (max-width: 941px ) {
     .firstPage {
-        /* dont know how to scale background */
-      
       height: auto;
       background-image: url(images/doctors-keyboard.jpg);
       background-repeat: no-repeat, repeat;
-      background-size: initial;
+      background-size: 100%;
       /* background-size:; */
     }
     .centerText{
