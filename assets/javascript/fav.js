@@ -84,17 +84,10 @@ $(document).on("click", ".fav-button", function () {
 
             // show a modal to alert user and hide the modal after 2 seconds
             show_modal("modal1");
-            setTimeout(function () { hide_modal("modal1"); }, 3000);
+            setTimeout(function () { hide_modal("modal1"); }, 2000);
         }
     })
 });
-
-
-/*
-    $('#modal2').modal();
-    $('#modal2').modal('open');
-    setTimeout(function () { $('#modal2').modal('close'); } , 2000)   
- */
 
 
 function show_modal(modalID) {
@@ -106,11 +99,6 @@ function show_modal(modalID) {
 function hide_modal(modalID) {
     $('#' + modalID).modal('close');
 }
-
-
-//localStorage.clear();
-//var array = ["a"];
-//localStorage.setItem('favorites', JSON.stringify(array));
 
 
 if (localStorage.getItem("favorites")) {  // if "favorites" key exists in localStorage
@@ -213,7 +201,7 @@ $(document).on("click", ".remove-fav-button", function () {
 });
 
 
-// refresh fav.html page whenever a favorite item is added to localStorage in case this page is open on a tab
+// refresh fav.html page whenever a favorite item is added to localStorage in case the page is open on a tab
 window.addEventListener("storage", function handler() {
     location.reload();
 });
