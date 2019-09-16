@@ -76,9 +76,9 @@ background-size: auto;
 @media only screen and (max-width: 941px ) {
     .firstPage {
       height: auto;
-      background-image: url(images/doctors-keyboard.jpg);
+      background-image: url(../images/doctors-keyboard.jpg);
       background-repeat: no-repeat, repeat;
-      background-size: 100%;
+      background-size: inherit;
       /* background-size:; */
     }
     .centerText{
