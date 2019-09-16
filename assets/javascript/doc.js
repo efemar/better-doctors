@@ -1,7 +1,4 @@
 // initializing float menu button, and its setup
-$(document).ready(function () {
-    $(".fixed-action-btn").floatingActionButton();
-});
 document.addEventListener("DOMContentLoaded", function () {
     var elems = document.querySelectorAll(".fixed-action-btn");
     var instances = M.FloatingActionButton.init(elems, {
@@ -51,6 +48,11 @@ $('a[href*="#"]')
 $(document).ready(function () {
     $('select').formSelect();
 });
+//-------------------------------------------------------------------------
+//initializing side nav bar on small screen
+$(document).ready(function(){
+    $('.sidenav').sidenav();
+  });
 //-------------------------------------------------------------------------
 $("#submit").on("click", function () {
     var gender;
