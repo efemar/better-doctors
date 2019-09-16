@@ -1,20 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-   
-    <!-- Compiled and minified JavaScript -->
+    <title>Favorite</title>
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=ABeeZee:400i|Prompt:300i&display=swap" rel="stylesheet">
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <!--JavaScript for materialize -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <!-- Compiled and minified CSS -->
+    <!-- materialized icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- materialized css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<<<<<<< HEAD
     <link rel="stylesheet" href="assets/css/reset.css">
+=======
+    <!-- our css -->
+>>>>>>> 6f8f8141ede779c5e717a9af35e7d9261600d579
     <link rel="stylesheet" href="assets/style.css">
+
+    <style>
+        .btn {
+            float: right;
+            top: 5px;
+            right: 5px;
+
+        }
+    </style>
 </head>
+
 <body>
+
+    <!-- add and remove favorite buttons 
+    <a href="" class="btn-floating green btn tooltipped waves-effect waves-light" data-position="right"
+        data-tooltip="Add to Favorites"><i class="material-icons">favorite</i></a>
+    <a href="" class="btn-floating red btn tooltipped waves-effect waves-light" data-position="right"
+        data-tooltip="Remove from Favorites"><i class="material-icons">delete</i></a>
+    -->
+
+    <!-- modal alerts -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <h4>Added sucessfully!</h4>
+        </div>
+    </div>
+
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <h4>Already added!</h4>
+        </div>
+    </div>
+
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <h4>Removed sucessfully!</h4>
+        </div>
+    </div>
+
+
+    <!-- Favorite Page -->
+    <div id="getStarted" class="third-page blue lighten-5">
+        <div class="container">
+            <div class="row ">
+                <div class="col l12 m12 s12">
+                    <h1>Your Favorites</h1>
+                </div>
+                <div id="favList" class="row">
+                    <h5 id="no-fav-text" class="centerText"></h5>
+
+
+                    <!--First Card -->
+                    <div class="col l4 m12 s12">
+                        <div class="card large">
+                            <a href="" class="btn-floating red btn tooltipped waves-effect waves-light"
+                                data-position="right" data-tooltip="Remove from Favorites"><i
+                                    class="material-icons">delete</i></a>
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="assets/images/Doctor.png">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator grey-text text-darken-4">SMITH S. HO, MD, PA<i
+                                        class="material-icons right">more_vert</i></span>
+                                <p>Languages: English</p>
+                                <p>Specialties: Internal Medicine</p>
+                                <p>Address: <a href="#">7610 Carroll Ave Ste 280, Takoma Park, MD 20912</a></p>
+                            </div>
+
+                            <div class="card-reveal">
+                                <span class="card-title grey-text text-darken-4">Bio:<i
+                                        class="material-icons right">close</i></span>
+                                <p>Specializing in internal medicine, Dr. Smith Ho, MD is one of the country's
+                                    most highly ranked doctors. He currently treats patients in Takoma park,
+                                    Maryland.\n\nDr. Ho is licensed to treat patients in Maryland.\n\nBased on his
+                                    credentials, network and experience, Dr. Ho is rated among the top 20% of all
+                                    doctors in the United States.\n\nIn addition, Dr. Ho has successfully passed a
+                                    background check including a medical license verification (active) and screening for
+                                    malpractice history (none found).</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Second Card
+                    <div class="col l4 m12 s12">
+                        <div class="card small">
+                            <a href="" class="btn-floating red btn tooltipped waves-effect waves-light"
+                                data-position="right" data-tooltip="Remove from Favorites"><i
+                                    class="material-icons">delete</i></a>
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="assets/images/Doctor.png">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator grey-text text-darken-4">Card Title<i
+                                        class="material-icons right">more_vert</i></span>
+                                <p><a href="#">This is a link</a></p>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title grey-text text-darken-4">Card Title<i
+                                        class="material-icons right">close</i></span>
+                                <p>Here is some more information about this product that is only revealed once clicked
+                                    on.</p>
+                            </div>
+                        </div>
+                    </div>
+                    Third Card
+                    <div class="col l4 m12 s12">
+                        <div class="card small">
+                            <a href="" class="btn-floating red btn tooltipped waves-effect waves-light"
+                                data-position="right" data-tooltip="Remove from Favorites"><i
+                                    class="material-icons">delete</i></a>
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="assets/images/Doctor.png">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator grey-text text-darken-4">Card Title<i
+                                        class="material-icons right">more_vert</i></span>
+                                <p><a href="#">This is a link</a></p>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title grey-text text-darken-4">Card Title<i
+                                        class="material-icons right">close</i></span>
+                                <p>Here is some more information about this product that is only revealed once clicked
+                                    on.</p>
+                            </div>
+                        </div>
+                    </div>-->
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Footer-->
+    <footer class="page-footer amber lighten-5">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <p class="grey-text text-darken-2">ConnectDoc is a product & service by CodingElite LLC, a
+                        fictitious company created by some cheeky software developers</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <ul>
+                        <li><a class="grey-text text-darken-2" href="#!">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
     <script src="assets/javascript/doc.js"></script>
     <script src="assets/javascript/translate.js"></script>
+    <script src="assets/javascript/fav.js"></script>
+
 </body>
+
 </html>
