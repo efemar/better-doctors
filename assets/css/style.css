@@ -9,6 +9,7 @@ body {
 #ast {
   color: red;
 }
+
 .gender {
   font-size: 1.3rem;
 }
@@ -114,4 +115,13 @@ main {
 .card-image {
   position: absolute;
   z-index: 1;
+}
+
+@media only screen and (max-width: 640px) {
+  
+  #female-pic {
+    display: none;
+
+  }
+  
 }

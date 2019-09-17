@@ -156,7 +156,7 @@
                         </div>
                     </div>
                     <!-- column with doctor picture -->
-                    <div class="col m5 l4 s12">
+                    <div id="female-pic" class="col m5 l4 s12">
                         <img class="responsive-img " src="assets/images/female-doctor.png" alt="doctor picture">
                     </div>
                 </div>
@@ -171,65 +171,7 @@
                     <h1>Your Matches</h1>
                 </div>
                 <div id="doctor-cards" class="row">
-
-                    <!--First Card
-                    <div class="col l4 m12 s12">
-                        <div class="card small">
-                            <div class="card-image waves-effect waves-block waves-light">
-                                <img class="activator" src="assets/images/Doctor.png">
-                            </div>
-                            <div class="card-content">
-                                <span class="card-title activator grey-text text-darken-4">Card Title<i
-                                        class="material-icons right">more_vert</i></span>
-                                <p><a href="#">This is a link</a></p>
-                            </div>
-                            <div class="card-reveal">
-                                <span class="card-title grey-text text-darken-4">Card Title<i
-                                        class="material-icons right">close</i></span>
-                                <p>Here is some more information about this product that is only revealed once clicked
-                                    on.</p>
-                            </div>
-                        </div>
-                    </div>
-                    Second Card
-                    <div class="col l4 m12 s12">
-                        <div class="card small">
-                            <div class="card-image waves-effect waves-block waves-light">
-                                <img class="activator" src="assets/images/Doctor.png">
-                            </div>
-                            <div class="card-content">
-                                <span class="card-title activator grey-text text-darken-4">Card Title<i
-                                        class="material-icons right">more_vert</i></span>
-                                <p><a href="#">This is a link</a></p>
-                            </div>
-                            <div class="card-reveal">
-                                <span class="card-title grey-text text-darken-4">Card Title<i
-                                        class="material-icons right">close</i></span>
-                                <p>Here is some more information about this product that is only revealed once clicked
-                                    on.</p>
-                            </div>
-                        </div>
-                    </div>
-                    Third Card
-                    <div class="col l4 m12 s12">
-                        <div class="card small">
-                            <div class="card-image waves-effect waves-block waves-light">
-                                <img class="activator" src="assets/images/Doctor.png">
-                            </div>
-                            <div class="card-content">
-                                <span class="card-title activator grey-text text-darken-4">Card Title<i
-                                        class="material-icons right">more_vert</i></span>
-                                <p><a href="#">This is a link</a></p>
-                            </div>
-                            <div class="card-reveal">
-                                <span class="card-title grey-text text-darken-4">Card Title<i
-                                        class="material-icons right">close</i></span>
-                                <p>Here is some more information about this product that is only revealed once clicked
-                                    on.</p>
-                            </div>
-                        </div>
-                    </div>
-                    -->
+                    <h5 id="no-doctor-text" class="centerText"></h5>
                 </div>
             </div>
         </div>
@@ -248,8 +190,8 @@
                     data-tooltip="Search"><i class="material-icons">search</i></a></li>
             <li><a href="fav.html" class="btn-floating green btn tooltipped" data-position="left"
                     data-tooltip="Favorite"><i class="material-icons">favorite</i></a></li>
-            <li><a href="contacts.html" class="btn-floating  blue btn tooltipped" data-position="left" data-tooltip="Contact us"><i
-                        class="material-icons">markunread</i></a></li>
+            <li><a href="contacts.html" class="btn-floating  blue btn tooltipped" data-position="left"
+                    data-tooltip="Contact us"><i class="material-icons">markunread</i></a></li>
         </ul>
     </div>
 
@@ -264,6 +206,12 @@
     <div id="modal2" class="modal">
         <div class="modal-content">
             <h4>Already added!</h4>
+        </div>
+    </div>
+
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <h4 class="red-text">Location required!</h4>
         </div>
     </div>
 
