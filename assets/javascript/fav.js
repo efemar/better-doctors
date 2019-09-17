@@ -193,10 +193,10 @@ if (localStorage.getItem("favorites")) {  // if "favorites" key exists in localS
         }
 
     } else {  // "favorites" key exists but has NO item (its value is just "[]"), this could happen after you delete all favorites in the list
-        $("#no-fav-text").text("You don't have favorites!");
+        $("#no-fav-text").text("You don't have any favorites!");
     }
 } else { // if "favorites" key does NOT exist in localStorage
-    $("#no-fav-text").text("You don't have favorites!");
+    $("#no-fav-text").text("You don't have any favorites!");
 }
 
 
@@ -222,8 +222,8 @@ $(document).on("click", ".remove-fav-button", function () {
     // "favorites" key will still exist in localStorage but its value is just "[]"
     if ((JSON.parse(localStorage.getItem("favorites"))).length === 0) {
         // or  if (localStorage.getItem("favorites") === "[]") {
-        $("#no-fav-text").text("You don't have favorites!");
-    }
+        $("#no-fav-text").text("You don't have any favorites!");
+    }                                                                           
 
 });
 
