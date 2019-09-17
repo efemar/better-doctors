@@ -1,15 +1,17 @@
-// initializing float menu button, and its setup
+//initializing float menu button, and its setup
 document.addEventListener("DOMContentLoaded", function () {
     var elems = document.querySelectorAll(".fixed-action-btn");
     var instances = M.FloatingActionButton.init(elems, {
         direction: "top"
     });
 });
+
 //------------------------------------------------------------------------
 //initializing tooltip
-$(document).ready(function () {
-    $(".tooltipped").tooltip();
+ $(document).ready(function () {
+    $(".tooltipped").tooltip()
 });
+
 //-------------------------------------------------------------------------
 //smooth scroll to our anchor links
 $('a[href*="#"]')
@@ -43,71 +45,28 @@ $('a[href*="#"]')
             }
         }
     });
+
 //-------------------------------------------------------------------------
 //initializing drop input for specialities
 $(document).ready(function () {
     $('select').formSelect();
 });
+
+//-------------------------------------------------------------------------
 //initializing side nav bar on small screen
 $(document).ready(function () {
     $('.sidenav').sidenav();
 });
+
 //-------------------------------------------------------------------------
-//$("#submit").on("click", function () { })
-// initializing float menu button, and its setup
+//initializing float menu button, and its setup
 $(document).ready(function () {
     $(".fixed-action-btn").floatingActionButton();
 });
-document.addEventListener("DOMContentLoaded", function () {
-    var elems = document.querySelectorAll(".fixed-action-btn");
-    var instances = M.FloatingActionButton.init(elems, {
-        direction: "top"
-    });
-});
+
+
 //------------------------------------------------------------------------
-//initializing tooltip
-$(document).ready(function () {
-    $(".tooltipped").tooltip();
-});
-//-------------------------------------------------------------------------
-//smooth scroll to our anchor links
-$('a[href*="#"]')
-    .not('[href="#"]')
-    .not('[href="#0"]')
-    .click(function (event) {
-        if (
-            location.pathname.replace(/^\//, "") ==
-            this.pathname.replace(/^\//, "") &&
-            location.hostname == this.hostname
-        ) {
-            var target = $(this.hash);
-            target = target.length ? target : $("[name=" + this.hash.slice(1) + "]");
-            if (target.length) {
-                event.preventDefault();
-                $("html, body").animate({
-                    scrollTop: target.offset().top
-                },
-                    800,
-                    function () {
-                        var $target = $(target);
-                        $target.focus();
-                        if ($target.is(":focus")) {
-                            return false;
-                        } else {
-                            $target.attr("tabindex", "-1");
-                            $target.focus(); // Set focus again
-                        }
-                    }
-                );
-            }
-        }
-    });
-//-------------------------------------------------------------------------
-//initializing drop input for specialities
-$(document).ready(function () {
-    $('select').formSelect();
-});
-//-------------------------------------------------------------------------
+//event listener for "Submit"
 $("#search-submit").on("click", function () {
 
     var gender;
@@ -118,6 +77,14 @@ $("#search-submit").on("click", function () {
     }
 
     var location = $("#input_text").val().trim().toLowerCase();
+
+    if(!location)
+    {
+         // show a modal to alert user and hide the modal after 2 seconds
+         show_modal("modal3");
+         setTimeout(function () { hide_modal("modal3"); }, 2000);
+    }
+
     var specID = $("#spec-option").val().toLowerCase();
     var language = $("#lang-option").val();
 
@@ -139,9 +106,15 @@ $("#search-submit").on("click", function () {
         } else {
             results = rawResults.filter(item => JSON.stringify(item.practices).includes("English"));
         }
+        
+        console.log(results.length);
 
         if (results.length == 0) {
-            $("#doctor-cards").text("No doctors found!");
+            
+            $("#doctor-cards").empty();
+            var h5Ele = $("<h5 class='centerText'>No doctors found!</h5>");
+            $("#doctor-cards").append(h5Ele);
+           
         } else {
 
             $("#doctor-cards").empty();
@@ -193,6 +166,8 @@ $("#search-submit").on("click", function () {
                         results[i].practices[0].visit_address.zip;
                 }
 
+                var newAddress = address.replace(/\s/g, "+");
+
                 var bio = results[i].profile.bio;
 
                 var newDiv = $("<div>");
@@ -213,6 +188,8 @@ $("#search-submit").on("click", function () {
                 addToFavEle.html("<i class='material-icons'>favorite</i>");
                 addToFavEle.attr("style", "top: 5px; right: 5px;");
 
+                $(".tooltipped").tooltip();
+
                 newDiv11.append(addToFavEle);
 
                 var imgEle = $("<img class='activator' src='" + src + "'>");
@@ -226,11 +203,11 @@ $("#search-submit").on("click", function () {
                 nameEle.addClass("card-title activator grey-text text-darken-4");
                 nameEle.html(doctorName + "<i class='material-icons right'>more_vert</i>");
 
-                var lanEle = $("<p>Languages: " + languages + "</p>");
+                var lanEle = $("<p class='lang'>Languages: " + languages + "</p>");
 
-                var speEle = $("<p>Specialties: " + specialties + "</p>");
-
-                var addressEle = $("<p>Address: <a href='#'>" + address + "</a></p>");
+                var speEle = $("<p class='spec'>Specialties: " + specialties + "</p>");
+                
+                var addressEle = $("<p class='address'>Address: <a href='https://www.google.com/maps/place/" + newAddress + "' target='_blank'>" + address + "</a></p>");
 
                 newDiv12.append(nameEle, lanEle, speEle, addressEle);
 
@@ -241,7 +218,7 @@ $("#search-submit").on("click", function () {
                 bioTitle.addClass("card-title grey-text text-darken-4");
                 bioTitle.html("Bio:" + "<i class='material-icons right'>close</i>");
 
-                var bioContent = $("<p>" + bio + "</p>");
+                var bioContent = $("<p class='bio'>" + bio + "</p>");
 
                 newDiv13.append(bioTitle, bioContent);
                 newDiv1.append(newDiv11, newDiv12, newDiv13);
