@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,11 +17,8 @@
     <!-- materialized css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <!-- our css -->
-
     <link rel="stylesheet" href="assets/css/style.css">
-
 </head>
-
 <body>
     <!-- first page -->
     <div id="homePage" class="firstPage ">
@@ -135,7 +131,7 @@
 
                         <!-- Switch -->
                         <div class="row">
-                            <div class="input-field col s12">
+                            <div class="input-field col s6 m6 l6">
                                 <div class="switch">
                                     <label>
                                         <span class="gender">Male</span>
@@ -145,11 +141,8 @@
                                     </label>
                                 </div>
                             </div>
-                        </div>
-
-                        <!-- submit button -->
-                        <div class="row">
-                            <div class="col s8">
+                            <!-- submit button -->
+                            <div class="col s6 m6 l6">
                                 <a class="bigButtons waves-effect waves-light btn-large submit-search"
                                     id="search-submit"><i class="material-icons right">sort</i>Submit</a>
                             </div>
@@ -171,15 +164,11 @@
                     <h1>Your Matches</h1>
                 </div>
                 <div id="doctor-cards" class="row">
-                   
-
                 </div>
             </div>
         </div>
     </div>
-
     <!-- fixed button menu, drop on hover, tooltip added, operted by script -->
-
     <div class="fixed-action-btn m1 s1">
         <a class="btn-floating btn-large  blue lighten-1">
             <i class="large material-icons">menu</i>
@@ -195,28 +184,22 @@
                     data-tooltip="Contact us"><i class="material-icons">markunread</i></a></li>
         </ul>
     </div>
-
-
     <!-- modal alerts -->
     <div id="modal1" class="modal">
         <div class="modal-content">
             <h4>Added sucessfully!</h4>
         </div>
     </div>
-
     <div id="modal2" class="modal">
         <div class="modal-content">
             <h4>Already added!</h4>
         </div>
     </div>
-
     <div id="modal3" class="modal">
         <div class="modal-content">
             <h4 class="red-text">Location required!</h4>
         </div>
     </div>
-
-
     <!--Footer-->
     <footer class="page-footer amber lighten-5">
         <div class="container">
@@ -240,5 +223,4 @@
     <!-- our favorites javascript -->
     <script src="assets/javascript/fav.js"></script>
 </body>
-
 </html>
