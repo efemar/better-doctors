@@ -78,12 +78,13 @@ $("#search-submit").on("click", function () {
 
     var location = $("#input_text").val().trim().toLowerCase();
 
-    if(! location)
+    if(!location)
     {
          // show a modal to alert user and hide the modal after 2 seconds
          show_modal("modal3");
          setTimeout(function () { hide_modal("modal3"); }, 2000);
     }
+
     var specID = $("#spec-option").val().toLowerCase();
     var language = $("#lang-option").val();
 
@@ -105,11 +106,15 @@ $("#search-submit").on("click", function () {
         } else {
             results = rawResults.filter(item => JSON.stringify(item.practices).includes("English"));
         }
+        
+        console.log(results.length);
 
         if (results.length == 0) {
-
-            $("#no-doctor-text").text("No doctors found!");
-
+            
+            $("#doctor-cards").empty();
+            var h5Ele = $("<h5 class='centerText'>No doctors found!</h5>");
+            $("#doctor-cards").append(h5Ele);
+           
         } else {
 
             $("#doctor-cards").empty();
