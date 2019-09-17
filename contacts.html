@@ -1,20 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-   
-    <!-- Compiled and minified JavaScript -->
+    <title>Favorite</title>
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=ABeeZee:400i|Prompt:300i&display=swap" rel="stylesheet">
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <!--JavaScript for materialize -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <!-- Compiled and minified CSS -->
+    <!-- materialized icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- materialized css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" href="assets/css/reset.css">
-    <link rel="stylesheet" href="assets/style.css">
+    <!-- our css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
 </head>
-<body>
+
+<body class="third-page blue lighten-5">
+        <!-- Navigation bar -->
+        <!-- <div class="favpage"> -->
+            <!-- Favorite Page -->
+            <h1>contacts</h1>
+            <main>
+            <div>
+                <nav class=" navigation">
+                        <div class="container">
+                            <div class="nav-wrapper ">
+                                <!-- Language links -->
+                                <ul id="nav-mobile" class="left hide-on-med-and-down">
+                                    <li><a id="english" value="EN" href="#">EN</a></li>
+                                    <li><a id="spanish" value="ES" href="#">ES</a></li>
+                                    <li><a id="french" value="FR" href="#">FR</a></li>
+                                </ul>
+                                <!-- Navigation Links -->
+                                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="fav.html">Favorites</a></li>
+                                    <li><a href="index.html#getStarted">Search</a></li>
+                                    <li><a href="contacts.html">Contacts</a></li>
+                                </ul>
+                                <ul class="sidenav" id="mobile-demo">
+                                        <li><a href="index.html">Home</a></li>
+                                        <li><a href="fav.html">Favorites</a></li>
+                                        <li><a href="index.html#getstarted">Search</a></li>
+                                        <li><a href="contacts.html">Contacts</a></li>
+                                    <hr>
+                                    <li><a id="english" value="EN" href="#">EN</a></li>
+                                    <li><a id="spanish" value="ES" href="#">ES</a></li>
+                                    <li><a id="chinese" value="FR" href="#">FR</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+        <div class="container">
+            <div class="row ">
+                <div class="col l12 m12 s12">
+                    <h1>Your Favorites</h1>
+                </div>
+                <div id="favList" class="row">
+                    <h5 id="no-fav-text" class="centerText"></h5>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- fixed nav button -->
+   
+    <div class="fixed-action-btn m1 s1">
+            <a class="btn-floating btn-large  blue lighten-1">
+                <i class="large material-icons">menu</i>
+            </a>
+            <ul>
+                <li><a href="index.html" class="btn-floating red btn tooltipped" data-position="left" data-tooltip="Home"><i
+                            class="material-icons">home</i></a></li>
+                <li><a href="index.html#getStarted" class="btn-floating yellow darken-1 btn tooltipped" data-position="left"
+                        data-tooltip="Search"><i class="material-icons">search</i></a></li>
+                <li><a href="fav.html" class="btn-floating green btn tooltipped" data-position="left"
+                        data-tooltip="Favorite"><i class="material-icons">favorite</i></a></li>
+                <li><a href="contacts.html" class="btn-floating  blue btn tooltipped" data-position="left" data-tooltip="Contact us"><i
+                            class="material-icons">markunread</i></a></li>
+            </ul>
+        </div>
+</main>
+
+    <!--Footer-->
+    <footer class="page-footer amber lighten-5">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <p class="grey-text text-darken-2">ConnectDoc is a product & service by CodingElite LLC, a
+                        fictitious company created by some cheeky software developers</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <ul>
+                        <li><a class="grey-text text-darken-2" href="#!">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+<!-- </div> -->
     <script src="assets/javascript/doc.js"></script>
     <script src="assets/javascript/translate.js"></script>
+    <script src="assets/javascript/fav.js"></script>
+
 </body>
+
 </html>
