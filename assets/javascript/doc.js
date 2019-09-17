@@ -86,6 +86,9 @@ $("#search-submit").on("click", function () {
     }
 
     var specID = $("#spec-option").val().toLowerCase();
+   
+    console.log(specID);
+
     var language = $("#lang-option").val();
 
     // queryURl with gender and location
@@ -203,9 +206,9 @@ $("#search-submit").on("click", function () {
                 nameEle.addClass("card-title activator grey-text text-darken-4");
                 nameEle.html(doctorName + "<i class='material-icons right'>more_vert</i>");
 
-                var lanEle = $("<p>Languages: " + languages + "</p>");
+                var lanEle = $("<p class='lang'>Languages: " + languages + "</p>");
 
-                var speEle = $("<p>Specialties: " + specialties + "</p>");
+                var speEle = $("<p class='spec'>Specialties: " + specialties + "</p>");
                 
                 var addressEle = $("<p>Address: <a href='https://www.google.com/maps/place/" + newAddress + "' target='_blank'>" + address + "</a></p>");
 
@@ -218,12 +221,18 @@ $("#search-submit").on("click", function () {
                 bioTitle.addClass("card-title grey-text text-darken-4");
                 bioTitle.html("Bio:" + "<i class='material-icons right'>close</i>");
 
-                var bioContent = $("<p>" + bio + "</p>");
+                var bioContent = $("<p class='bio'>" + bio + "</p>");
 
                 newDiv13.append(bioTitle, bioContent);
                 newDiv1.append(newDiv11, newDiv12, newDiv13);
                 newDiv.append(newDiv1);
                 $("#doctor-cards").append(newDiv);
+                 
+                if ($("#home-page-lang").attr("lang") == "sp")
+                { tranSp(); }
+                else if ($("#home-page-lang").attr("lang") == "sp")
+                { tranFr(); }
+            
             }
         }
     });

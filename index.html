@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" id="home-page-lang">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,11 +17,8 @@
     <!-- materialized css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <!-- our css -->
-
     <link rel="stylesheet" href="assets/css/style.css">
-
 </head>
-
 <body>
     <!-- first page -->
     <div id="homePage" class="firstPage ">
@@ -63,9 +59,9 @@
                 <div class="row">
                     <div class="col l8 m9 s12">
                         <div class="centerText">
-                            <h1>Welcome to a Healthier World</h1>
-                            <h3>One Patient At a Time</h3>
-                            <a class="bigButtons waves-effect waves-light btn-large " href="#getStarted"><i
+                            <h1 class="welcome">Welcome to a Healthier World</h1>
+                            <h3 class="onePatient">One Patient At a Time</h3>
+                            <a class="bigButtons waves-effect waves-light btn-large " id="connectDoc" href="#getStarted"><i
                                     class="material-icons right">expand_more</i>Connect with your Doctor</a>
                         </div>
                     </div>
@@ -78,7 +74,7 @@
         <div class="container">
             <div class="row">
                 <div class="col l12 m12 s12">
-                    <h1>Choose your doctor</h1>
+                    <h1 class="chooseDoc">Choose your doctor</h1>
                 </div>
                 <div class="row">
                     <!-- search colomn -->
@@ -88,7 +84,7 @@
                             <div class="row">
                                 <div class="input-field col s12">
                                     <input id="input_text" type="text" data-length="30">
-                                    <label class="label" for="input_text"><span id="ast">* </span> Your Location
+                                    <label class="label" id="locationForm" for="input_text"><span id="ast">* </span> Your Location
                                         "CA-San-Diego"</label>
                                 </div>
                             </div>
@@ -98,25 +94,26 @@
                             <div class="input-field col s12">
                                 <select id="spec-option">
                                     <option></option>
-                                    <option data-uid="dentist">Dentist</option>
-                                    <option data-uid="ophthalmologist">Ophthalmologist</option>
-                                    <option data-uid="optometrist">Optometrist</option>
-                                    <option data-uid="gynecologist">Gynecologist</option>
-                                    <option data-uid="dermatologist">Dermatologist</option>
-                                    <option data-uid="anesthesiologist">Anesthesiologist</option>
-                                    <option data-uid="allergist">Allergist</option>
-                                    <option data-uid="psychologist">Psychologist</option>
-                                    <option data-uid="neurologist">Neurologist</option>
-                                    <option data-uid="orthodontist">Orthodontist</option>
-                                    <option data-uid="endocrinologist">Endocrinologist</option>
-                                    <option data-uid="pediatrician">Pediatrician</option>
-                                    <option data-uid="optometrist">Optometrist</option>
-                                    <option data-uid="gastroenterologist">Gastroenterologist</option>
-                                    <option data-uid="pulmonologist">Pulmonologist</option>
-                                    <option data-uid="cardiologist">Cardiologist</option>
-                                    <option data-uid="chiropractor">Chiropractor</option>
+                                    <option class="Dentist" value="dentist">Dentist</option>
+                                    <option class="Ophthalmologist" value="ophthalmologist">Ophthalmologist</option>
+                                    <option class="Optometrist" value="optometrist">Optometrist</option>
+                                    <option class="Gynecologist" value="gynecologist">Gynecologist</option>
+                                    <option class="Dermatologist" value="dermatologist">Dermatologist</option>
+                                    <option class="Anesthesiologist" value="anesthesiologist">Anesthesiologist</option>
+                                    <option class="Allergist" value="allergist">Allergist</option>
+                                    <option class="Psychologist" value="psychologist">Psychologist</option>
+                                    <option class="Neurologist" value="neurologist">Neurologist</option>
+                                    <option class="Orthodontist" value="orthodontist">Orthodontist</option>
+                                    <option class="Endocrinologist" value="endocrinologist">Endocrinologist</option>
+                                    <option class="Pediatrician" value="pediatrician">Pediatrician</option>
+                                    <option class="Optometrist" value="optometrist">Optometrist</option>
+                                    <option class="Gastroenterologist" value="gastroenterologist">Gastroenterologist</option>
+                                    <option class="Pulmonologist" value="pulmonologist">Pulmonologist</option>
+                                    <option class="Cardiologist" value="cardiologist">Cardiologist</option>
+                                    <option class= "Chiropractor" value="chiropractor">Chiropractor</option>
                                 </select>
-                                <label class="label">Choose Specialties</label>
+                                <label class= "label" id="choose-spec">Choose Specialties</label>
+                
                             </div>
                         </div>
 
@@ -129,27 +126,24 @@
                                     <option value="Spanish">Spanish (Español)</option>
                                     <option value="French">French (Français)</option>
                                 </select>
-                                <label class="label">Choose Language</label>
+                                <label class="label" id="chooselang">Choose Language</label>
                             </div>
                         </div>
 
                         <!-- Switch -->
                         <div class="row">
-                            <div class="input-field col s12">
+                            <div class="input-field col s6 m6 l6">
                                 <div class="switch">
                                     <label>
-                                        <span class="gender">Male</span>
+                                        <span class="gender" id="male">Male</span>
                                         <input type="checkbox" id="gender-switch">
                                         <span class="lever"></span>
-                                        <span class="gender">Female</span>
+                                        <span class="gender" id="female">Female</span>
                                     </label>
                                 </div>
                             </div>
-                        </div>
-
-                        <!-- submit button -->
-                        <div class="row">
-                            <div class="col s8">
+                            <!-- submit button -->
+                            <div class="col s6 m6 l6">
                                 <a class="bigButtons waves-effect waves-light btn-large submit-search"
                                     id="search-submit"><i class="material-icons right">sort</i>Submit</a>
                             </div>
@@ -168,18 +162,14 @@
         <div class="container">
             <div class="row ">
                 <div class="col l12 m12 s12">
-                    <h1>Your Matches</h1>
+                    <h1 id="matches">Your Matches</h1>
                 </div>
                 <div id="doctor-cards" class="row">
-                   
-
                 </div>
             </div>
         </div>
     </div>
-
     <!-- fixed button menu, drop on hover, tooltip added, operted by script -->
-
     <div class="fixed-action-btn m1 s1">
         <a class="btn-floating btn-large  blue lighten-1">
             <i class="large material-icons">menu</i>
@@ -195,39 +185,33 @@
                     data-tooltip="About Us"><i class="material-icons">markunread</i></a></li>
         </ul>
     </div>
-
-
     <!-- modal alerts -->
     <div id="modal1" class="modal">
         <div class="modal-content">
-            <h4>Added sucessfully!</h4>
+            <h4 id="addsuc">Added sucessfully!</h4>
         </div>
     </div>
-
     <div id="modal2" class="modal">
         <div class="modal-content">
-            <h4>Already added!</h4>
+            <h4 id="allAdd">Already added!</h4>
         </div>
     </div>
-
     <div id="modal3" class="modal">
         <div class="modal-content">
             <h4 class="red-text">Location required!</h4>
         </div>
     </div>
-
-
     <!--Footer-->
     <footer class="page-footer amber lighten-5">
         <div class="container">
             <div class="row">
                 <div class="col l6 s12">
-                    <p class="grey-text text-darken-2">ConnectDoc is a product & service by CodingElite LLC, a
+                    <p class="grey-text text-darken-2" id="llc">ConnectDoc is a product & service by CodingElite LLC, a
                         fictitious company created by some cheeky software developers</p>
                 </div>
                 <div class="col l4 offset-l2 s12">
                     <ul>
-                        <li><a class="grey-text text-darken-2" href="#!">Terms & Conditions</a></li>
+                        <li><a class="grey-text text-darken-2" href="#!" id="terms">Terms & Conditions</a></li>
                     </ul>
                 </div>
             </div>
@@ -240,5 +224,4 @@
     <!-- our favorites javascript -->
     <script src="assets/javascript/fav.js"></script>
 </body>
-
 </html>
