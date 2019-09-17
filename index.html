@@ -50,16 +50,16 @@
                     <!-- Navigation Links -->
                     <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                     <ul id="nav-mobile" class="right hide-on-med-and-down">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="fav.html">Favourite</a></li>
-                        <li><a href="#getStarted">Search</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="#" class="topNavHome">Home</a></li>
+                        <li><a href="fav.html" class="topNavFavourite">Favourite</a></li>
+                        <li><a href="#getStarted" class="topNavSearch">Search</a></li>
+                        <li><a href="#" class="topNavContact">Contact</a></li>
                     </ul>
                     <ul class="sidenav" id="mobile-demo">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="fav.html">Favourite</a></li>
-                        <li><a href="#getStarted">Search</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="#"class ="sideNavHome">Home</a></li>
+                        <li><a href="fav.html" class="sideNavFavourite">Favourite</a></li>
+                        <li><a href="#getStarted" class="sideNavSearch">Search</a></li>
+                        <li><a href="#"class = "sideNavContact">Contact</a></li>
                         <hr>
                         <li><a id="english" value="EN" href="#">EN</a></li>
                         <li><a id="spanish" value="ES" href="#">ES</a></li>
@@ -74,9 +74,9 @@
                 <div class="row">
                     <div class="col l8 m9 s12">
                         <div class="centerText">
-                            <h1>Welcome to a Healthier World</h1>
-                            <h3>One Patient At a Time</h3>
-                            <a class="bigButtons waves-effect waves-light btn-large " href="#getStarted"><i
+                            <h1 class="welcome">Welcome to a Healthier World</h1>
+                            <h3 class="onePatient">One Patient At a Time</h3>
+                            <a class="bigButtons waves-effect waves-light btn-large " id="connectDoc" href="#getStarted"><i
                                     class="material-icons right">expand_more</i>Connect with your Doctor</a>
                         </div>
                     </div>
@@ -89,7 +89,7 @@
         <div class="container">
             <div class="row">
                 <div class="col l12 m12 s12">
-                    <h1>Choose your doctor</h1>
+                    <h1 class="chooseDoc">Choose your doctor</h1>
                 </div>
                 <div class="row">
                     <!-- search colomn -->
@@ -99,7 +99,7 @@
                             <div class="row">
                                 <div class="input-field col s12">
                                     <input id="input_text" type="text" data-length="30">
-                                    <label for="input_text"><span id="ast">* </span> Your Location in format
+                                    <label for="input_text" id="locationForm"><span id="ast">* </span> Your Location in format
                                         "CA-San-Diego"</label>
                                 </div>
                             </div>
@@ -109,25 +109,25 @@
                             <div class="input-field col s12">
                                 <select id="spec-option">
                                     <option></option>
-                                    <option data-uid="dentist">Dentist</option>
-                                    <option data-uid="ophthalmologist">Ophthalmologist</option>
-                                    <option data-uid="optometrist">Optometrist</option>
-                                    <option data-uid="gynecologist">Gynecologist</option>
-                                    <option data-uid="dermatologist">Dermatologist</option>
-                                    <option data-uid="anesthesiologist">Anesthesiologist</option>
-                                    <option data-uid="allergist">Allergist</option>
-                                    <option data-uid="psychologist">Psychologist</option>
-                                    <option data-uid="neurologist">Neurologist</option>
-                                    <option data-uid="orthodontist">Orthodontist</option>
-                                    <option data-uid="endocrinologist">Endocrinologist</option>
-                                    <option data-uid="pediatrician">Pediatrician</option>
-                                    <option data-uid="optometrist">Optometrist</option>
-                                    <option data-uid="gastroenterologist">Gastroenterologist</option>
-                                    <option data-uid="pulmonologist">Pulmonologist</option>
-                                    <option data-uid="cardiologist">Cardiologist</option>
-                                    <option data-uid="chiropractor">Chiropractor</option>
+                                    <option class="Dentist" data-uid="dentist">Dentist</option>
+                                    <option class="Ophthalmologist" data-uid="ophthalmologist">Ophthalmologist</option>
+                                    <option class="Optometrist" data-uid="optometrist">Optometrist</option>
+                                    <option class="Gynecologist" data-uid="gynecologist">Gynecologist</option>
+                                    <option class="Dermatologist" data-uid="dermatologist">Dermatologist</option>
+                                    <option class="Anesthesiologist" data-uid="anesthesiologist">Anesthesiologist</option>
+                                    <option class="Allergist" data-uid="allergist">Allergist</option>
+                                    <option class="Psychologist" data-uid="psychologist">Psychologist</option>
+                                    <option class="Neurologist" data-uid="neurologist">Neurologist</option>
+                                    <option class="Orthodontist" data-uid="orthodontist">Orthodontist</option>
+                                    <option class="Endocrinologist" data-uid="endocrinologist">Endocrinologist</option>
+                                    <option class="Pediatrician" data-uid="pediatrician">Pediatrician</option>
+                                    <option class="Optometrist" data-uid="optometrist">Optometrist</option>
+                                    <option class="Gastroenterologist" data-uid="gastroenterologist">Gastroenterologist</option>
+                                    <option class="Pulmonologist" data-uid="pulmonologist">Pulmonologist</option>
+                                    <option class="Cardiologist" data-uid="cardiologist">Cardiologist</option>
+                                    <option class= "Chiropractor" data-uid="chiropractor">Chiropractor</option>
                                 </select>
-                                <label class="label">Choose Specialities</label>
+                                <label class= "label" id="choose-spec">Choose Specialities</label>
                             </div>
                         </div>
                         <!-- Language input -->
@@ -139,7 +139,7 @@
                                     <option value="Spanish">Spanish (Español)</option>
                                     <option value="French">French (Français)</option>
                                 </select>
-                                <label class="label">Choose Language</label>
+                                <label class="label" id="chooselang">Choose Language</label>
                             </div>
                         </div>
 
@@ -148,10 +148,10 @@
                             <div class="input-field col s12">
                                 <div class="switch">
                                     <label>
-                                        <span class="gender">Male</span>
+                                        <span class="gender" id="male">Male</span>
                                         <input type="checkbox" id="gender-switch">
                                         <span class="lever"></span>
-                                        <span class="gender">Female</span>
+                                        <span class="gender" id="female">Female</span>
                                     </label>
                                 </div>
                             </div>
@@ -178,7 +178,7 @@
         <div class="container">
             <div class="row ">
                 <div class="col l12 m12 s12">
-                    <h1>Your Matches</h1>
+                    <h1 id="matches">Your Matches</h1>
                 </div>
                 <div id="doctor-cards" class="row">
 
@@ -253,13 +253,13 @@
         </a>
         <ul>
             <li><a href="#homePage" class="btn-floating red btn tooltipped" data-position="left" data-tooltip="Home"><i
-                        class="material-icons">home</i></a></li>
+                        class="material-icons" >home</i></a></li>
             <li><a href="#getStarted" class="btn-floating yellow darken-1 btn tooltipped" data-position="left"
-                    data-tooltip="Search"><i class="material-icons">search</i></a></li>
+                    data-tooltip="Search"><i class="material-icons" >search</i></a></li>
             <li><a href="fav.html" class="btn-floating green btn tooltipped" data-position="left"
-                    data-tooltip="Favorite"><i class="material-icons">favorite</i></a></li>
+                    data-tooltip="Favorite"><i class="material-icons" >favorite</i></a></li>
             <li><a href="" class="btn-floating  blue btn tooltipped" data-position="left" data-tooltip="Contact us"><i
-                        class="material-icons">markunread</i></a></li>
+                        class="material-icons" >markunread</i></a></li>
         </ul>
     </div>
 
@@ -267,13 +267,13 @@
     <!-- modal alerts -->
     <div id="modal1" class="modal">
         <div class="modal-content">
-            <h4>Added sucessfully!</h4>
+            <h4 id="addsuc">Added sucessfully!</h4>
         </div>
     </div>
 
     <div id="modal2" class="modal">
         <div class="modal-content">
-            <h4>Already added!</h4>
+            <h4 id="allAdd">Already added!</h4>
         </div>
     </div>
 
@@ -283,12 +283,12 @@
         <div class="container">
             <div class="row">
                 <div class="col l6 s12">
-                    <p class="grey-text text-darken-2">ConnectDoc is a product & service by CodingElite LLC, a
+                    <p class="grey-text text-darken-2" id="llc">ConnectDoc is a product & service by CodingElite LLC, a
                         fictitious company created by some cheeky software developers</p>
                 </div>
                 <div class="col l4 offset-l2 s12">
                     <ul>
-                        <li><a class="grey-text text-darken-2" href="#!">Terms & Conditions</a></li>
+                        <li><a class="grey-text text-darken-2" href="#!" id="terms">Terms & Conditions</a></li>
                     </ul>
                 </div>
             </div>
