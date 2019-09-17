@@ -153,7 +153,7 @@ if (localStorage.getItem("favorites")) {  // if "favorites" key exists in localS
             removeFavEle.attr("data-tooltip", "Remove from Favorites");
             removeFavEle.attr("id", doctorID);
             removeFavEle.html("<i class='material-icons'>delete</i>");
-            removeFavEle.attr("style", "top: 5px; right: 5px;");
+            removeFavEle.attr("style", "position: absolute; top: 5px; right: 5px;");
 
             newDiv11.append(removeFavEle);
 
