@@ -2,7 +2,7 @@ function googleTranslateElementInit() {
     new google.translate.TranslateElement({pageLanguage: '/en/ur'}, 'google_translate_element');
   }
 
-  $("#spanish").click(function () {
+  function tranSp() {
 
     var url = "https://translation.googleapis.com/language/translate/v2";
     //Strings requiring translation
@@ -141,5 +141,11 @@ function googleTranslateElementInit() {
       $(".spec").text(data.data.translations[41].translatedText);
       $(".address").text(data.data.translations[42].translatedText);
       $(".bio").text(data.data.translations[43].translatedText);
-    });       
-});
+    });    
+    
+    
+$("#home-page-lang").attr("lang", "sp");
+
+}
+
+$("#spanish").click(tranSp);
