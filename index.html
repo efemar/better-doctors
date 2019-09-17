@@ -20,17 +20,6 @@
     <!-- our css -->
 
     <link rel="stylesheet" href="assets/css/style.css">
-    <style>
-        .add-fav-button {
-            position: absolute;
-            z-index: 2;
-        }
-
-        .card-image {
-            position: absolute;
-            z-index: 1;
-        }
-    </style>
 
 </head>
 
@@ -51,13 +40,13 @@
                     <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                     <ul id="nav-mobile" class="right hide-on-med-and-down">
                         <li><a href="#">Home</a></li>
-                        <li><a href="fav.html">Favourite</a></li>
+                        <li><a href="fav.html" target="_blank">Favorites</a></li>
                         <li><a href="#getStarted">Search</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="contacts.html">Contact</a></li>
                     </ul>
                     <ul class="sidenav" id="mobile-demo">
                         <li><a href="#">Home</a></li>
-                        <li><a href="fav.html">Favourite</a></li>
+                        <li><a href="fav.html">Favorites</a></li>
                         <li><a href="#getStarted">Search</a></li>
                         <li><a href="#">Contact</a></li>
                         <hr>
@@ -99,7 +88,7 @@
                             <div class="row">
                                 <div class="input-field col s12">
                                     <input id="input_text" type="text" data-length="30">
-                                    <label for="input_text"><span id="ast">* </span> Your Location in format
+                                    <label class="label" for="input_text"><span id="ast">* </span> Your Location
                                         "CA-San-Diego"</label>
                                 </div>
                             </div>
@@ -127,9 +116,10 @@
                                     <option data-uid="cardiologist">Cardiologist</option>
                                     <option data-uid="chiropractor">Chiropractor</option>
                                 </select>
-                                <label class="label">Choose Specialities</label>
+                                <label class="label">Choose Specialties</label>
                             </div>
                         </div>
+
                         <!-- Language input -->
                         <div class="row">
                             <div class="input-field col s12">
@@ -174,7 +164,7 @@
         </div>
     </div>
     <!-- Third Page -->
-    <div id="getStarted" class="third-page blue lighten-5">
+    <div id="getStarted" class=" blue lighten-5">
         <div class="container">
             <div class="row ">
                 <div class="col l12 m12 s12">
@@ -252,13 +242,13 @@
             <i class="large material-icons">menu</i>
         </a>
         <ul>
-            <li><a href="#homePage" class="btn-floating red btn tooltipped" data-position="left" data-tooltip="Home"><i
+            <li><a href="index.html" class="btn-floating red btn tooltipped" data-position="left" data-tooltip="Home"><i
                         class="material-icons">home</i></a></li>
-            <li><a href="#getStarted" class="btn-floating yellow darken-1 btn tooltipped" data-position="left"
+            <li><a href="index.html#getStarted" class="btn-floating yellow darken-1 btn tooltipped" data-position="left"
                     data-tooltip="Search"><i class="material-icons">search</i></a></li>
             <li><a href="fav.html" class="btn-floating green btn tooltipped" data-position="left"
                     data-tooltip="Favorite"><i class="material-icons">favorite</i></a></li>
-            <li><a href="" class="btn-floating  blue btn tooltipped" data-position="left" data-tooltip="Contact us"><i
+            <li><a href="contacts.html" class="btn-floating  blue btn tooltipped" data-position="left" data-tooltip="Contact us"><i
                         class="material-icons">markunread</i></a></li>
         </ul>
     </div>

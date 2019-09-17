@@ -5,28 +5,35 @@ body {
 .centerText {
   text-align: center;
 }
+/* fixes with search bar */
 #ast {
   color: red;
 }
 .gender {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
 }
 .select-wrapper + label {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
 }
 .input-field > label {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
 }
-
 .label {
   font-weight: 700;
 }
+.select-wrapper input.select-dropdown {
+  height: 4.5rem;
+  font-size: 20px;}
+  input:not([type]), input[type=text]:not(.browser-default), input[type=password]:not(.browser-default), input[type=email]:not(.browser-default), input[type=url]:not(.browser-default), input[type=time]:not(.browser-default), input[type=date]:not(.browser-default), input[type=datetime]:not(.browser-default), input[type=datetime-local]:not(.browser-default), input[type=tel]:not(.browser-default), input[type=number]:not(.browser-default), input[type=search]:not(.browser-default), textarea.materialize-textarea {
+    height: 4.5rem;
+    font-size: 20px;}
 /* headings and form will have cursive font diferent from main text */
 h1,
 h2,
 h3,
 form {
   font-family: "Prompt", sans-serif;
+  margin: 1.8rem 0 1.68rem 0;
 }
 /* big buttons liks submit or get started */
 .bigButtons {
@@ -68,7 +75,7 @@ nav ul a:hover {
 }
 /* second page search bar */
 .secondPage {
-  height: 630px;
+  height: 700px;
 }
 /* added so when 'getstarted' clicked, our page scoll stops with some space on top */
 .addPadding {
@@ -85,4 +92,26 @@ nav ul a:hover {
   .centerText {
     margin-bottom: 200px;
   }
+}
+/* favpage */
+.third-page{
+  padding-top: 10px;
+  height: 500px
+}
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+main {
+  flex: 1 0 auto;
+}
+.add-fav-button {
+  position: absolute;
+  z-index: 2;
+}
+
+.card-image {
+  position: absolute;
+  z-index: 1;
 }
