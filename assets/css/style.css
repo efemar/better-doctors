@@ -123,5 +123,11 @@ main {
     display: none;
 
   }
+}
   
+/* About Us Page */
+
+#contact-h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
 }
