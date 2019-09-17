@@ -17,52 +17,24 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- materialized css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-<<<<<<< HEAD
-    <link rel="stylesheet" href="assets/css/reset.css">
-=======
     <!-- our css -->
->>>>>>> 6f8f8141ede779c5e717a9af35e7d9261600d579
-    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 
     <style>
-        .btn {
-            float: right;
-            top: 5px;
-            right: 5px;
+        .remove-fav-button {
+            position: absolute;
+            z-index: 2;
+        }
 
+        .card-image {
+            position: absolute;
+            z-index: 1;
         }
     </style>
+
 </head>
 
 <body>
-
-    <!-- add and remove favorite buttons 
-    <a href="" class="btn-floating green btn tooltipped waves-effect waves-light" data-position="right"
-        data-tooltip="Add to Favorites"><i class="material-icons">favorite</i></a>
-    <a href="" class="btn-floating red btn tooltipped waves-effect waves-light" data-position="right"
-        data-tooltip="Remove from Favorites"><i class="material-icons">delete</i></a>
-    -->
-
-    <!-- modal alerts -->
-    <div id="modal1" class="modal">
-        <div class="modal-content">
-            <h4>Added sucessfully!</h4>
-        </div>
-    </div>
-
-    <div id="modal2" class="modal">
-        <div class="modal-content">
-            <h4>Already added!</h4>
-        </div>
-    </div>
-
-    <div id="modal3" class="modal">
-        <div class="modal-content">
-            <h4>Removed sucessfully!</h4>
-        </div>
-    </div>
-
-
     <!-- Favorite Page -->
     <div id="getStarted" class="third-page blue lighten-5">
         <div class="container">
@@ -72,82 +44,6 @@
                 </div>
                 <div id="favList" class="row">
                     <h5 id="no-fav-text" class="centerText"></h5>
-
-
-                    <!--First Card -->
-                    <div class="col l4 m12 s12">
-                        <div class="card large">
-                            <a href="" class="btn-floating red btn tooltipped waves-effect waves-light"
-                                data-position="right" data-tooltip="Remove from Favorites"><i
-                                    class="material-icons">delete</i></a>
-                            <div class="card-image waves-effect waves-block waves-light">
-                                <img class="activator" src="assets/images/Doctor.png">
-                            </div>
-                            <div class="card-content">
-                                <span class="card-title activator grey-text text-darken-4">SMITH S. HO, MD, PA<i
-                                        class="material-icons right">more_vert</i></span>
-                                <p>Languages: English</p>
-                                <p>Specialties: Internal Medicine</p>
-                                <p>Address: <a href="#">7610 Carroll Ave Ste 280, Takoma Park, MD 20912</a></p>
-                            </div>
-
-                            <div class="card-reveal">
-                                <span class="card-title grey-text text-darken-4">Bio:<i
-                                        class="material-icons right">close</i></span>
-                                <p>Specializing in internal medicine, Dr. Smith Ho, MD is one of the country's
-                                    most highly ranked doctors. He currently treats patients in Takoma park,
-                                    Maryland.\n\nDr. Ho is licensed to treat patients in Maryland.\n\nBased on his
-                                    credentials, network and experience, Dr. Ho is rated among the top 20% of all
-                                    doctors in the United States.\n\nIn addition, Dr. Ho has successfully passed a
-                                    background check including a medical license verification (active) and screening for
-                                    malpractice history (none found).</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Second Card
-                    <div class="col l4 m12 s12">
-                        <div class="card small">
-                            <a href="" class="btn-floating red btn tooltipped waves-effect waves-light"
-                                data-position="right" data-tooltip="Remove from Favorites"><i
-                                    class="material-icons">delete</i></a>
-                            <div class="card-image waves-effect waves-block waves-light">
-                                <img class="activator" src="assets/images/Doctor.png">
-                            </div>
-                            <div class="card-content">
-                                <span class="card-title activator grey-text text-darken-4">Card Title<i
-                                        class="material-icons right">more_vert</i></span>
-                                <p><a href="#">This is a link</a></p>
-                            </div>
-                            <div class="card-reveal">
-                                <span class="card-title grey-text text-darken-4">Card Title<i
-                                        class="material-icons right">close</i></span>
-                                <p>Here is some more information about this product that is only revealed once clicked
-                                    on.</p>
-                            </div>
-                        </div>
-                    </div>
-                    Third Card
-                    <div class="col l4 m12 s12">
-                        <div class="card small">
-                            <a href="" class="btn-floating red btn tooltipped waves-effect waves-light"
-                                data-position="right" data-tooltip="Remove from Favorites"><i
-                                    class="material-icons">delete</i></a>
-                            <div class="card-image waves-effect waves-block waves-light">
-                                <img class="activator" src="assets/images/Doctor.png">
-                            </div>
-                            <div class="card-content">
-                                <span class="card-title activator grey-text text-darken-4">Card Title<i
-                                        class="material-icons right">more_vert</i></span>
-                                <p><a href="#">This is a link</a></p>
-                            </div>
-                            <div class="card-reveal">
-                                <span class="card-title grey-text text-darken-4">Card Title<i
-                                        class="material-icons right">close</i></span>
-                                <p>Here is some more information about this product that is only revealed once clicked
-                                    on.</p>
-                            </div>
-                        </div>
-                    </div>-->
 
                 </div>
             </div>

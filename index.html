@@ -21,13 +21,11 @@
 
     <link rel="stylesheet" href="assets/css/style.css">
     <style>
-        .card {
-            position: relative;
-        }
         .add-fav-button {
             position: absolute;
             z-index: 2;
         }
+
         .card-image {
             position: absolute;
             z-index: 1;
@@ -53,13 +51,13 @@
                     <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                     <ul id="nav-mobile" class="right hide-on-med-and-down">
                         <li><a href="#">Home</a></li>
-                        <li><a href="#">Favourite</a></li>
+                        <li><a href="fav.html">Favourite</a></li>
                         <li><a href="#getStarted">Search</a></li>
                         <li><a href="#">Contact</a></li>
                     </ul>
                     <ul class="sidenav" id="mobile-demo">
                         <li><a href="#">Home</a></li>
-                        <li><a href="#">Favourite</a></li>
+                        <li><a href="fav.html">Favourite</a></li>
                         <li><a href="#getStarted">Search</a></li>
                         <li><a href="#">Contact</a></li>
                         <hr>
@@ -101,7 +99,8 @@
                             <div class="row">
                                 <div class="input-field col s12">
                                     <input id="input_text" type="text" data-length="30">
-                                    <label  for="input_text"><span id="ast">* </span> Your Location in format "CA-San-Diego"</label>
+                                    <label for="input_text"><span id="ast">* </span> Your Location in format
+                                        "CA-San-Diego"</label>
                                 </div>
                             </div>
                         </form>
@@ -110,23 +109,23 @@
                             <div class="input-field col s12">
                                 <select id="spec-option">
                                     <option></option>
-                                    <option  data-uid="dentist">Dentist</option>
-                                    <option  data-uid="ophthalmologist">Ophthalmologist</option>
-                                    <option  data-uid="optometrist">Optometrist</option>
-                                    <option  data-uid="gynecologist">Gynecologist</option>
-                                    <option  data-uid="dermatologist">Dermatologist</option>
-                                    <option  data-uid="anesthesiologist">Anesthesiologist</option>
-                                    <option  data-uid="allergist">Allergist</option>
-                                    <option  data-uid="psychologist">Psychologist</option>
-                                    <option  data-uid="neurologist">Neurologist</option>
-                                    <option  data-uid="orthodontist">Orthodontist</option>
-                                    <option  data-uid="endocrinologist">Endocrinologist</option>
-                                    <option  data-uid="pediatrician">Pediatrician</option>
-                                    <option  data-uid="optometrist">Optometrist</option>
-                                    <option  data-uid="gastroenterologist">Gastroenterologist</option>
-                                    <option  data-uid="pulmonologist">Pulmonologist</option>
-                                    <option  data-uid="cardiologist">Cardiologist</option>
-                                    <option  data-uid="chiropractor">Chiropractor</option>
+                                    <option data-uid="dentist">Dentist</option>
+                                    <option data-uid="ophthalmologist">Ophthalmologist</option>
+                                    <option data-uid="optometrist">Optometrist</option>
+                                    <option data-uid="gynecologist">Gynecologist</option>
+                                    <option data-uid="dermatologist">Dermatologist</option>
+                                    <option data-uid="anesthesiologist">Anesthesiologist</option>
+                                    <option data-uid="allergist">Allergist</option>
+                                    <option data-uid="psychologist">Psychologist</option>
+                                    <option data-uid="neurologist">Neurologist</option>
+                                    <option data-uid="orthodontist">Orthodontist</option>
+                                    <option data-uid="endocrinologist">Endocrinologist</option>
+                                    <option data-uid="pediatrician">Pediatrician</option>
+                                    <option data-uid="optometrist">Optometrist</option>
+                                    <option data-uid="gastroenterologist">Gastroenterologist</option>
+                                    <option data-uid="pulmonologist">Pulmonologist</option>
+                                    <option data-uid="cardiologist">Cardiologist</option>
+                                    <option data-uid="chiropractor">Chiropractor</option>
                                 </select>
                                 <label class="label">Choose Specialities</label>
                             </div>
@@ -161,15 +160,15 @@
                         <!-- submit button -->
                         <div class="row">
                             <div class="col s8">
-                                <a class="bigButtons waves-effect waves-light btn-large submit-search" id="search-submit"><i
-                                        class="material-icons right">sort</i>Submit</a>
+                                <a class="bigButtons waves-effect waves-light btn-large submit-search"
+                                    id="search-submit"><i class="material-icons right">sort</i>Submit</a>
                             </div>
                         </div>
                     </div>
                     <!-- column with doctor picture -->
                     <div class="col m5 l4 s12">
-                            <img class="responsive-img " src="assets/images/female-doctor.png" alt="doctor picture">
-                        </div>
+                        <img class="responsive-img " src="assets/images/female-doctor.png" alt="doctor picture">
+                    </div>
                 </div>
             </div>
         </div>
@@ -257,12 +256,27 @@
                         class="material-icons">home</i></a></li>
             <li><a href="#getStarted" class="btn-floating yellow darken-1 btn tooltipped" data-position="left"
                     data-tooltip="Search"><i class="material-icons">search</i></a></li>
-            <li><a href="" class="btn-floating green btn tooltipped" data-position="left" data-tooltip="Favorite"><i
-                        class="material-icons">favorite</i></a></li>
+            <li><a href="fav.html" class="btn-floating green btn tooltipped" data-position="left"
+                    data-tooltip="Favorite"><i class="material-icons">favorite</i></a></li>
             <li><a href="" class="btn-floating  blue btn tooltipped" data-position="left" data-tooltip="Contact us"><i
                         class="material-icons">markunread</i></a></li>
         </ul>
     </div>
+
+
+    <!-- modal alerts -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <h4>Added sucessfully!</h4>
+        </div>
+    </div>
+
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <h4>Already added!</h4>
+        </div>
+    </div>
+
 
     <!--Footer-->
     <footer class="page-footer amber lighten-5">
@@ -284,6 +298,8 @@
     <script src="assets/javascript/doc.js"></script>
     <!-- our translate javascript -->
     <script src="assets/javascript/translate.js"></script>
+    <!-- our favorite javascript -->
+    <script src="assets/javascript/fav.js"></script>
 </body>
 
 </html>
