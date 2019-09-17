@@ -101,15 +101,15 @@
                             <div class="row">
                                 <div class="input-field col s12">
                                     <input id="input_text" type="text" data-length="30">
-                                    <label  for="input_text"><span id="ast">* </span> Your Location in format "CA-Berkeley"</label>
+                                    <label  for="input_text"><span id="ast">* </span> Your Location in format "CA-San-Diego"</label>
                                 </div>
                             </div>
                         </form>
                         <!-- specialty input -->
                         <div class="row">
                             <div class="input-field col s12">
-                                <select >
-                                    <option ></option>
+                                <select id="spec-option">
+                                    <option></option>
                                     <option  data-uid="dentist">Dentist</option>
                                     <option  data-uid="ophthalmologist">Ophthalmologist</option>
                                     <option  data-uid="optometrist">Optometrist</option>
@@ -134,11 +134,11 @@
                         <!-- Language input -->
                         <div class="row">
                             <div class="input-field col s12">
-                                <select>
-                                    <option value="#"></option>
-                                    <option value="EN">English</option>
-                                    <option value="ES">Spanish (Español)</option>
-                                    <option value="FR">French (Français)</option>
+                                <select id="lang-option">
+                                    <option></option>
+                                    <option value="English">English</option>
+                                    <option value="Spanish">Spanish (Español)</option>
+                                    <option value="French">French (Français)</option>
                                 </select>
                                 <label class="label">Choose Language</label>
                             </div>
@@ -150,7 +150,7 @@
                                 <div class="switch">
                                     <label>
                                         <span class="gender">Male</span>
-                                        <input type="checkbox">
+                                        <input type="checkbox" id="gender-switch">
                                         <span class="lever"></span>
                                         <span class="gender">Female</span>
                                     </label>
@@ -161,7 +161,7 @@
                         <!-- submit button -->
                         <div class="row">
                             <div class="col s8">
-                                <a class="bigButtons waves-effect waves-light btn-large submit-search" id="submit"><i
+                                <a class="bigButtons waves-effect waves-light btn-large submit-search" id="search-submit"><i
                                         class="material-icons right">sort</i>Submit</a>
                             </div>
                         </div>
@@ -182,7 +182,8 @@
                     <h1>Your Matches</h1>
                 </div>
                 <div id="doctor-cards" class="row">
-                    <!--First Card-->
+
+                    <!--First Card
                     <div class="col l4 m12 s12">
                         <div class="card small">
                             <div class="card-image waves-effect waves-block waves-light">
@@ -201,7 +202,7 @@
                             </div>
                         </div>
                     </div>
-                    <!--Second Card-->
+                    Second Card
                     <div class="col l4 m12 s12">
                         <div class="card small">
                             <div class="card-image waves-effect waves-block waves-light">
@@ -220,7 +221,7 @@
                             </div>
                         </div>
                     </div>
-                    <!--Third Card-->
+                    Third Card
                     <div class="col l4 m12 s12">
                         <div class="card small">
                             <div class="card-image waves-effect waves-block waves-light">
@@ -239,6 +240,7 @@
                             </div>
                         </div>
                     </div>
+                    -->
                 </div>
             </div>
         </div>
