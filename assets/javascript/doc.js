@@ -118,6 +118,13 @@ $("#search-submit").on("click", function () {
     }
 
     var location = $("#input_text").val().trim().toLowerCase();
+
+    if(! location)
+    {
+         // show a modal to alert user and hide the modal after 2 seconds
+         show_modal("modal3");
+         setTimeout(function () { hide_modal("modal3"); }, 2000);
+    }
     var specID = $("#spec-option").val().toLowerCase();
     var language = $("#lang-option").val();
 
@@ -141,7 +148,9 @@ $("#search-submit").on("click", function () {
         }
 
         if (results.length == 0) {
-            $("#doctor-cards").text("No doctors found!");
+
+            $("#no-doctor-text").text("No doctors found!");
+
         } else {
 
             $("#doctor-cards").empty();
@@ -193,6 +202,8 @@ $("#search-submit").on("click", function () {
                         results[i].practices[0].visit_address.zip;
                 }
 
+                var newAddress = address.replace(/\s/g, "+");
+
                 var bio = results[i].profile.bio;
 
                 var newDiv = $("<div>");
@@ -229,8 +240,8 @@ $("#search-submit").on("click", function () {
                 var lanEle = $("<p>Languages: " + languages + "</p>");
 
                 var speEle = $("<p>Specialties: " + specialties + "</p>");
-
-                var addressEle = $("<p>Address: <a href='#'>" + address + "</a></p>");
+                
+                var addressEle = $("<p>Address: <a href='https://www.google.com/maps/place/" + newAddress + "' target='_blank'>" + address + "</a></p>");
 
                 newDiv12.append(nameEle, lanEle, speEle, addressEle);
 
