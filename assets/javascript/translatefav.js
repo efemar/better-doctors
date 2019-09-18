@@ -57,8 +57,8 @@ function googleTranslateElementInit() {
         /* dy */
         $("#no-fav-text").text(data.data.translations[11].translatedText);
         $(".langFav").text(data.data.translations[12].translatedText);
-        $("#.specFav").text(data.data.translations[13].translatedText);
-        $("#.bioFav").text(data.data.translations[14].translatedText);
+        $(".specFav").text(data.data.translations[13].translatedText);
+        $(".bioFav").text(data.data.translations[14].translatedText);
        
         
     });    
