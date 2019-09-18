@@ -24,7 +24,8 @@ function googleTranslateElementInit() {
     /* choose doc */
     url += "&q=" + escape($(".chooseDoc").text());
     /* location form */
-    url += "&q=" + escape($("#locationForm").text());
+    url += "&q=" + escape($(".city").text());
+    url += "&q=" + escape($(".locationForm").text());
     /* specialties */
    /*  url += "&q=" + escape($("#spec-option").text()); */
     /* choose spec */
@@ -97,54 +98,55 @@ function googleTranslateElementInit() {
         /* choose doc */
         $(".chooseDoc").text(data.data.translations[11].translatedText);
         /* location form */ /* slight bug */
-        $("#locationForm").text(data.data.translations[12].translatedText);
+        $(".city").text(data.data.translations[12].translatedText);
+        $(".locationForm").text(data.data.translations[13].translatedText);
         /* specialties */
        /*  $("#spec-option").text(data.data.translations[13].translatedText); */
         /* choose spec */
-        $("#choose-spec").text(data.data.translations[13].translatedText);
+        $("#choose-spec").text(data.data.translations[14].translatedText);
         /* list of spec */
-        $(".Dentist").text(data.data.translations[14].translatedText);
-        $(".Ophthalmologist").text(data.data.translations[15].translatedText);
-        $(".Optometrist").text(data.data.translations[16].translatedText);
-        $(".Gynecologist").text(data.data.translations[17].translatedText);
-        $(".Dermatologist").text(data.data.translations[18].translatedText);
-        $(".Anesthesiologist").text(data.data.translations[19].translatedText);
-        $(".Allergist").text(data.data.translations[20].translatedText);
-        $(".Psychologist").text(data.data.translations[21].translatedText);
-        $(".Neurologist").text(data.data.translations[22].translatedText);
-        $(".Orthodontist").text(data.data.translations[23].translatedText);
-        $(".Endocrinologist").text(data.data.translations[24].translatedText);
-        $(".Pediatrician").text(data.data.translations[25].translatedText);
-        $(".Optometrist").text(data.data.translations[26].translatedText);
-        $(".Gastroenterologist").text(data.data.translations[27].translatedText);
-        $(".Pulmonologist").text(data.data.translations[28].translatedText);
-        $(".Cardiologist").text(data.data.translations[29].translatedText);
-        $(".Chiropractor").text(data.data.translations[30].translatedText);
+        $(".Dentist").text(data.data.translations[15].translatedText);
+        $(".Ophthalmologist").text(data.data.translations[16].translatedText);
+        $(".Optometrist").text(data.data.translations[17].translatedText);
+        $(".Gynecologist").text(data.data.translations[18].translatedText);
+        $(".Dermatologist").text(data.data.translations[19].translatedText);
+        $(".Anesthesiologist").text(data.data.translations[20].translatedText);
+        $(".Allergist").text(data.data.translations[21].translatedText);
+        $(".Psychologist").text(data.data.translations[22].translatedText);
+        $(".Neurologist").text(data.data.translations[23].translatedText);
+        $(".Orthodontist").text(data.data.translations[24].translatedText);
+        $(".Endocrinologist").text(data.data.translations[25].translatedText);
+        $(".Pediatrician").text(data.data.translations[26].translatedText);
+        $(".Optometrist").text(data.data.translations[27].translatedText);
+        $(".Gastroenterologist").text(data.data.translations[28].translatedText);
+        $(".Pulmonologist").text(data.data.translations[29].translatedText);
+        $(".Cardiologist").text(data.data.translations[30].translatedText);
+        $(".Chiropractor").text(data.data.translations[31].translatedText);
         /* chooselang */
-        $("#chooselang").text(data.data.translations[31].translatedText);
+        $("#chooselang").text(data.data.translations[32].translatedText);
         /* gender */
-        $("#male").text(data.data.translations[32].translatedText);
-        $("#female").text(data.data.translations[33].translatedText);
+        $("#male").text(data.data.translations[33].translatedText);
+        $("#female").text(data.data.translations[34].translatedText);
         /* search submit */
-        $("#search-submit").text(data.data.translations[34].translatedText);
+        $("#search-submit").text(data.data.translations[35].translatedText);
         /* matches */
-        $("#matches").text(data.data.translations[35].translatedText);
+        $("#matches").text(data.data.translations[36].translatedText);
       /* add to cards */
-      $("#addsuc").text(data.data.translations[36].translatedText);
-      $("#allAdd").text(data.data.translations[37].translatedText);
+      $("#addsuc").text(data.data.translations[37].translatedText);
+      $("#allAdd").text(data.data.translations[38].translatedText);
       /* footer */
-      $("#llc").text(data.data.translations[38].translatedText);
-      $("#terms").text(data.data.translations[39].translatedText);
+      $("#llc").text(data.data.translations[39].translatedText);
+      $("#terms").text(data.data.translations[40].translatedText);
       /* doc card */
       /* $(".card-title").text(data.data.translations[40].translatedText); */
-      $(".lang").text(data.data.translations[40].translatedText);
-      $(".spec").text(data.data.translations[41].translatedText);
-      $(".address").text(data.data.translations[42].translatedText);
-      $(".bio").text(data.data.translations[43].translatedText);
+      $(".lang").text(data.data.translations[41].translatedText);
+      $(".spec").text(data.data.translations[42].translatedText);
+      $(".address").text(data.data.translations[43].translatedText);
+      $(".bio").text(data.data.translations[44].translatedText);
     });    
     
     
-$("#home-page-lang").attr("lang", "sp");
+$("html").attr("lang", "sp");
 
 }
 

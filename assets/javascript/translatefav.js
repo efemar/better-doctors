@@ -64,7 +64,7 @@ function googleTranslateElementInit() {
     });    
     
     
-$("#home-page-lang").attr("lang", "sp");
+$("html").attr("lang", "sp");
 
 }
 

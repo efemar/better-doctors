@@ -256,8 +256,8 @@ $("#search-submit").on("click", function () {
                 //$("#doctor-cards").append(newDiv);
                 div112.append(newDiv);
 
-                if ($("#home-page-lang").attr("lang") == "sp") { tranSp(); }
-                else if ($("#home-page-lang").attr("lang") == "sp") { tranFr(); }
+                if ($("html").attr("lang") == "sp") { tranSp(); }
+                
 
             }
         }
