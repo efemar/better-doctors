@@ -2,6 +2,7 @@ function googleTranslateElementInit() {
     new google.translate.TranslateElement({pageLanguage: '/en/ur'}, 'google_translate_element');
   }
 
+
   function tranSp() {
 
     var url = "https://translation.googleapis.com/language/translate/v2";
@@ -16,22 +17,17 @@ function googleTranslateElementInit() {
     url += "&q=" + escape($(".sideNavSearch").text());
     url += "&q=" + escape($(".sideNavFavorites").text());
     url += "&q=" + escape($(".sideNavContact").text());
-    /* meet the team */
-    url += "&q=" + escape($(".meet").text());
-    /* alfredo */
-    /* url += "&q=" + escape($(".alf").text()); */
-    url += "&q=" + escape($(".alfOne").text());
-    /* elisa */
-    url += "&q=" + escape($(".carmenSD").text());
-    /* kobi */
-    url += "&q=" + escape($(".number23").text());
-    /* sunny */
-    url += "&q=" + escape($(".sunny").text());
-    /* kostas */
-    url += "&q=" + escape($(".kostas").text());
+    /* fav */
+    url += "&q=" + escape($(".fav").text());
     /* footer */
     url += "&q=" + escape($("#llc").text());
     url += "&q=" + escape($("#terms").text());
+    /* dy */
+    url += "&q=" + escape($("#no-fav-text").text());
+    url += "&q=" + escape($(".langFav").text());
+    url += "&q=" + escape($(".specFav").text());
+    url += "&q=" + escape($(".bioFav").text());
+    
     // keep track of language
     var selectedLang = $("#targetLanguage")
     //Target language
@@ -53,22 +49,17 @@ function googleTranslateElementInit() {
         $(".sideNavSearch").text(data.data.translations[5].translatedText);
         $(".sideNavFavorites").text(data.data.translations[6].translatedText);
         $(".sideNavContact").text(data.data.translations[7].translatedText);
-        /* meet the team */
-        $(".meet").text(data.data.translations[8].translatedText);
-        /* alfredo */
-       /*  $(".alf").text(data.data.translations[9].translatedText); */
-        $(".alfOne").text(data.data.translations[9].translatedText);
-        /* elisa */
-        $(".carmenSD").text(data.data.translations[10].translatedText);
-        /* kobi*/
-        $(".number23").text(data.data.translations[11].translatedText);
-        /* sunny */
-        $(".sunny").text(data.data.translations[12].translatedText);
-        /* kostas */
-        $(".kostas").text(data.data.translations[13].translatedText);
+        /* fav*/
+        $(".fav").text(data.data.translations[8].translatedText);
         /* footer */
-        $("#llc").text(data.data.translations[14].translatedText);
-        $("#terms").text(data.data.translations[15].translatedText);
+        $("#llc").text(data.data.translations[9].translatedText);
+        $("#terms").text(data.data.translations[10].translatedText);
+        /* dy */
+        $("#no-fav-text").text(data.data.translations[11].translatedText);
+        $(".langFav").text(data.data.translations[12].translatedText);
+        $("#.specFav").text(data.data.translations[13].translatedText);
+        $("#.bioFav").text(data.data.translations[14].translatedText);
+       
         
     });    
     
@@ -80,7 +71,10 @@ $("#home-page-lang").attr("lang", "Sp");
 $("#spanish").click(tranSp);
 
 
-/* function tranFr() {
+
+
+
+/*function tranFr() {
 
     var url = "https://translation.googleapis.com/language/translate/v2";
     //Strings requiring translation
@@ -94,22 +88,17 @@ $("#spanish").click(tranSp);
     url += "&q=" + escape($(".sideNavSearch").text());
     url += "&q=" + escape($(".sideNavFavorites").text());
     url += "&q=" + escape($(".sideNavContact").text());
-    /* meet the team *
-    url += "&q=" + escape($(".meet").text());
-    /* alfredo *
-    /* url += "&q=" + escape($(".alf").text()); */
-    url += "&q=" + escape($(".alfOne").text());
-    /* elisa *
-    url += "&q=" + escape($(".carmenSD").text());
-    /* kobi *
-    url += "&q=" + escape($(".number23").text());
-    /* sunny *
-    url += "&q=" + escape($(".sunny").text());
-    /* kostas *
-    url += "&q=" + escape($(".kostas").text());
+    /* fav *
+    url += "&q=" + escape($(".fav").text());
     /* footer *
     url += "&q=" + escape($("#llc").text());
     url += "&q=" + escape($("#terms").text());
+    /* dy *
+    url += "&q=" + escape($("#no-fav-text").text());
+    url += "&q=" + escape($(".langFav").text());
+    url += "&q=" + escape($(".specFav").text());
+    url += "&q=" + escape($(".bioFav").text());
+    
     // keep track of language
     var selectedLang = $("#targetLanguage")
     //Target language
@@ -131,22 +120,18 @@ $("#spanish").click(tranSp);
         $(".sideNavSearch").text(data.data.translations[5].translatedText);
         $(".sideNavFavorites").text(data.data.translations[6].translatedText);
         $(".sideNavContact").text(data.data.translations[7].translatedText);
-        /* meet the team *
-        $(".meet").text(data.data.translations[8].translatedText);
-        /* alfredo *
-        /* $(".alf").text(data.data.translations[9].translatedText); *
-        $(".alfOne").text(data.data.translations[9].translatedText);
-        /* elisa *
-        $(".carmenSD").text(data.data.translations[10].translatedText);
-        /* kobi*
-        $(".number23").text(data.data.translations[11].translatedText);
-        /* sunny *
-        $(".sunny").text(data.data.translations[12].translatedText);
-        /* kostas *
-        $(".kostas").text(data.data.translations[13].translatedText);
+        /* fav*
+        $(".fav").text(data.data.translations[8].translatedText);
         /* footer *
-        $("#llc").text(data.data.translations[14].translatedText);
-        $("#terms").text(data.data.translations[15].translatedText);
+        $("#llc").text(data.data.translations[9].translatedText);
+        $("#terms").text(data.data.translations[10].translatedText);
+         /* dy *
+         $("#no-fav-text").text(data.data.translations[11].translatedText);
+         $(".langFav").text(data.data.translations[12].translatedText);
+         $("#.specFav").text(data.data.translations[13].translatedText);
+         $("#.bioFav").text(data.data.translations[14].translatedText);
+        
+       
         
     });    
     

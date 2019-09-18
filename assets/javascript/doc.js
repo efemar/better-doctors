@@ -89,7 +89,7 @@ $("#search-submit").on("click", function () {
     var language = $("#lang-option").val();
 
     // queryURl with gender and location
-    var queryURL = "https://api.betterdoctor.com/2016-03-01/doctors?location=" + location + "&gender=" + gender + "&limit=6&user_key=f89971ab4d8b480630c107682513f5b8";
+    var queryURL = "https://api.betterdoctor.com/2016-03-01/doctors?location=" + location + "&gender=" + gender + "&limit=100&user_key=f89971ab4d8b480630c107682513f5b8";
     if (specID) {
         queryURL = queryURL + "&specialty_uid=" + specID;
     }

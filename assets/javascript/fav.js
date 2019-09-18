@@ -168,9 +168,9 @@ if (localStorage.getItem("favorites")) {  // if "favorites" key exists in localS
             nameEle.addClass("card-title activator grey-text text-darken-4");
             nameEle.html(doctorName + "<i class='material-icons right'>more_vert</i>");
 
-            var lanEle = $("<p>Languages: " + languages + "</p>");
+            var lanEle = $("<p class ='langFav'>Languages: " + languages + "</p>");
 
-            var speEle = $("<p>Specialties: " + specialties + "</p>");
+            var speEle = $("<p class = 'specFav'>Specialties: " + specialties + "</p>");
 
             var addressEle = $("<p>Address: <a href='#'>" + address + "</a></p>");
 
@@ -183,7 +183,7 @@ if (localStorage.getItem("favorites")) {  // if "favorites" key exists in localS
             bioTitle.addClass("card-title grey-text text-darken-4");
             bioTitle.html("Bio:" + "<i class='material-icons right'>close</i>");
 
-            var bioContent = $("<p>" + bio + "</p>");
+            var bioContent = $("<p class ='bioFav'>" + bio + "</p>");
 
             newDiv13.append(bioTitle, bioContent);
             newDiv1.append(newDiv11, newDiv12, newDiv13);
