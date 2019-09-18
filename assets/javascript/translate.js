@@ -144,40 +144,40 @@ function googleTranslateElementInit() {
     });    
     
     
-$("#home-page-lang").attr("lang", "sp");
+$("#home-page-lang").attr("lang", "Sp");
 
 }
 
 $("#spanish").click(tranSp);
 
-function tranFr() {
+/*function tranFr() {
 
     var url = "https://translation.googleapis.com/language/translate/v2";
     //Strings requiring translation
-    /* top nav */
+    /* top nav *
     url += "?q=" + escape($(".topNavHome").text());
     url += "&q=" + escape($(".topNavFavorites").text());
     url += "&q=" + escape($(".topNavSearch").text());
     url += "&q=" + escape($(".topNavContact").text());
-    /* side nav */
+    /* side nav *
     url += "&q=" + escape($(".sideNavHome").text());
     url += "&q=" + escape($(".sideNavFavorites").text());
     url += "&q=" + escape($(".sideNavSearch").text());
     url += "&q=" + escape($(".sideNavContact").text());
-    /* center text */
+    /* center text *
     url += "&q=" + escape($(".welcome").text());
     url += "&q=" + escape($(".onePatient").text());
-    /* connect with doc */
+    /* connect with doc *
     url += "&q=" + escape($("#connectDoc").text());
-    /* choose doc */
+    /* choose doc *
     url += "&q=" + escape($(".chooseDoc").text());
-    /* location form */
+    /* location form *
     url += "&q=" + escape($("#locationForm").text());
-    /* specialties */
+    /* specialties *
    /*  url += "&q=" + escape($("#spec-option").text()); */
-    /* choose spec */
+    /* choose spec *
     url += "&q=" + escape($("#choose-spec").text());
-    /* list of spec */
+    /* list of spec *
     url += "&q=" + escape($(".Dentist").text());
     url += "&q=" + escape($(".Ophthalmologist").text());
     url += "&q=" + escape($(".Optometrist").text());
@@ -195,23 +195,23 @@ function tranFr() {
     url += "&q=" + escape($(".Pulmonologist").text());
     url += "&q=" + escape($(".Cardiologist").text());
     url += "&q=" + escape($(".Chiropractor").text());
-    /* choose lang */
+    /* choose lang *
     url += "&q=" + escape($("#chooselang").text());
-    /* gender */
+    /* gender *
     url += "&q=" + escape($("#male").text());
     url += "&q=" + escape($("#female").text());
-    /* search submit */
+    /* search submit *
     url += "&q=" + escape($("#search-submit").text());
-    /* matches */
+    /* matches *
     url += "&q=" + escape($("#matches").text());
-    /* add suc */
+    /* add suc *
     url += "&q=" + escape($("#addsuc").text());
     url += "&q=" + escape($("#allAdd").text());
-    /* footer */
+    /* footer *
     url += "&q=" + escape($("#llc").text());
     url += "&q=" + escape($("#terms").text());
-    /* doc card */
-    /* url += "&q=" + escape($(".card-title").text()); */
+    /* doc card *
+    /* url += "&q=" + escape($(".card-title").text()); *
     url += "&q=" + escape($(".lang").text());
     url += "&q=" + escape($(".spec").text());
     url += "&q=" + escape($(".address").text());
@@ -227,30 +227,30 @@ function tranFr() {
         //Results are returned in an array following the order they were passed. 
         console.log(data);
         console.log(url);
-        /* top nav */
+        /* top nav *
         $(".topNaveHome").text(data.data.translations[0].translatedText);
         $(".topNavFavorites").text(data.data.translations[1].translatedText);
         $(".topNavSearch").text(data.data.translations[2].translatedText);
         $(".topNavContact").text(data.data.translations[3].translatedText);
-        /* side nav */
+        /* side nav *
         $(".sideNaveHome").text(data.data.translations[4].translatedText);
         $(".sideNavFavorites").text(data.data.translations[5].translatedText);
         $(".sideNavSearch").text(data.data.translations[6].translatedText);
         $(".sideNavContact").text(data.data.translations[7].translatedText);
-        /* center text */
+        /* center text *
         $(".welcome").text(data.data.translations[8].translatedText);
         $(".onePatient").text(data.data.translations[9].translatedText);
-        /* connect with doc */
+        /* connect with doc *
         $("#connectDoc").text(data.data.translations[10].translatedText);
-        /* choose doc */
+        /* choose doc *
         $(".chooseDoc").text(data.data.translations[11].translatedText);
-        /* location form */ /* slight bug */
+        /* location form *
         $("#locationForm").text(data.data.translations[12].translatedText);
         /* specialties */
        /*  $("#spec-option").text(data.data.translations[13].translatedText); */
-        /* choose spec */
+        /* choose spec *
         $("#choose-spec").text(data.data.translations[13].translatedText);
-        /* list of spec */
+        /* list of spec *
         $(".Dentist").text(data.data.translations[14].translatedText);
         $(".Ophthalmologist").text(data.data.translations[15].translatedText);
         $(".Optometrist").text(data.data.translations[16].translatedText);
@@ -268,23 +268,23 @@ function tranFr() {
         $(".Pulmonologist").text(data.data.translations[28].translatedText);
         $(".Cardiologist").text(data.data.translations[29].translatedText);
         $(".Chiropractor").text(data.data.translations[30].translatedText);
-        /* chooselang */
+        /* chooselang *
         $("#chooselang").text(data.data.translations[31].translatedText);
-        /* gender */
+        /* gender *
         $("#male").text(data.data.translations[32].translatedText);
         $("#female").text(data.data.translations[33].translatedText);
-        /* search submit */
+        /* search submit *
         $("#search-submit").text(data.data.translations[34].translatedText);
-        /* matches */
+        /* matches *
         $("#matches").text(data.data.translations[35].translatedText);
-      /* add to cards */
+      /* add to cards *
       $("#addsuc").text(data.data.translations[36].translatedText);
       $("#allAdd").text(data.data.translations[37].translatedText);
-      /* footer */
+      /* footer *
       $("#llc").text(data.data.translations[38].translatedText);
       $("#terms").text(data.data.translations[39].translatedText);
-      /* doc card */
-      /* $(".card-title").text(data.data.translations[40].translatedText); */
+      /* doc card *
+      /* $(".card-title").text(data.data.translations[40].translatedText); *
       $(".lang").text(data.data.translations[40].translatedText);
       $(".spec").text(data.data.translations[41].translatedText);
       $(".address").text(data.data.translations[42].translatedText);
@@ -296,7 +296,7 @@ $("#home-page-lang").attr("lang", "FR");
 
 }
 
-$("#french").click(tranFr);
+$("#french").click(tranFr);*/
 
 
 
