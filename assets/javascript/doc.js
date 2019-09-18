@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 //------------------------------------------------------------------------
 //initializing tooltip
- $(document).ready(function () {
+$(document).ready(function () {
     $(".tooltipped").tooltip()
 });
 
@@ -78,16 +78,13 @@ $("#search-submit").on("click", function () {
 
     var location = $("#input_text").val().trim().toLowerCase();
 
-    if(!location)
-    {
-         // show a modal to alert user and hide the modal after 2 seconds
-         show_modal("modal3");
-         setTimeout(function () { hide_modal("modal3"); }, 2000);
+    if (!location) {
+        // show a modal to alert user and hide the modal after 2 seconds
+        show_modal("modal3");
+        setTimeout(function () { hide_modal("modal3"); }, 2000);
     }
 
     var specID = $("#spec-option").val().toLowerCase();
-   
-    console.log(specID);
 
     var language = $("#lang-option").val();
 
@@ -109,18 +106,42 @@ $("#search-submit").on("click", function () {
         } else {
             results = rawResults.filter(item => JSON.stringify(item.practices).includes("English"));
         }
-        
+
         console.log(results.length);
 
+        $("#your-matches").empty();
+
+        var div1 = $("<div>");
+        div1.addClass("container");
+
+        var div11 = $("<div>");
+        div11.addClass("row");
+
+        var div111 = $("<div>");
+        div111.addClass("col l12 m12 s12");
+
+        var div112 = $("<div>");
+        div112.addClass("row");
+
+        var h1Ele = $("<h1>");
+        h1Ele.text("Your Matches");
+        h1Ele.attr("id", "matches");
+
+        div111.append(h1Ele);
+        div11.append(div111, div112);
+        div1.append(div11);
+
+
         if (results.length == 0) {
-            
-            $("#doctor-cards").empty();
+
+            //$("#doctor-cards").empty();
             var h5Ele = $("<h5 class='centerText'>No doctors found!</h5>");
-            $("#doctor-cards").append(h5Ele);
-           
+            //$("#doctor-cards").append(h5Ele);
+            div112.append(h5Ele);
+
         } else {
 
-            $("#doctor-cards").empty();
+            //$("#doctor-cards").empty();
 
             for (var i = 0; i < results.length; i++) {
 
@@ -191,8 +212,6 @@ $("#search-submit").on("click", function () {
                 addToFavEle.html("<i class='material-icons'>favorite</i>");
                 addToFavEle.attr("style", "top: 5px; right: 5px;");
 
-                $(".tooltipped").tooltip();
-
                 newDiv11.append(addToFavEle);
 
                 var imgEle = $("<img class='activator' src='" + src + "'>");
@@ -209,7 +228,7 @@ $("#search-submit").on("click", function () {
                 var lanEle = $("<p class='lang'>Languages: " + languages + "</p>");
 
                 var speEle = $("<p class='spec'>Specialties: " + specialties + "</p>");
-                
+
                 var addressEle = $("<p>Address: <a href='https://www.google.com/maps/place/" + newAddress + "' target='_blank'>" + address + "</a></p>");
 
                 newDiv12.append(nameEle, lanEle, speEle, addressEle);
@@ -226,15 +245,18 @@ $("#search-submit").on("click", function () {
                 newDiv13.append(bioTitle, bioContent);
                 newDiv1.append(newDiv11, newDiv12, newDiv13);
                 newDiv.append(newDiv1);
-                $("#doctor-cards").append(newDiv);
-                 
-                if ($("#home-page-lang").attr("lang") == "sp")
-                { tranSp(); }
-                else if ($("#home-page-lang").attr("lang") == "sp")
-                { tranFr(); }
-            
+                //$("#doctor-cards").append(newDiv);
+                div112.append(newDiv);
+
+                if ($("#home-page-lang").attr("lang") == "sp") { tranSp(); }
+                else if ($("#home-page-lang").attr("lang") == "sp") { tranFr(); }
+
             }
         }
+
+        $("#your-matches").append(div1);
+        $(".tooltipped").tooltip();
+
     });
 });
 
