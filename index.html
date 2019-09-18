@@ -26,11 +26,12 @@
         <nav class=" navigation">
             <div class="container">
                 <div class="nav-wrapper ">
+
                     <!-- Language links -->
                     <ul id="nav-mobile" class="left hide-on-med-and-down">
                         <li><a id="english" value="EN" href="#">EN</a></li>
                         <li><a id="spanish" value="ES" href="#">ES</a></li>
-                        <li><a id="french" value="FR" href="#">FR</a></li>
+                       <!-- <li><a id="french" value="FR" href="#">FR</a></li> -->
                     </ul>
                     <!-- Navigation Links -->
                     <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
@@ -47,7 +48,7 @@
                         <li><a href="contacts.html" class="sideNavContact">About Us</a></li>
                         <hr>
                         <li><a id="english" value="EN" href="#">EN</a></li>
-                        <li><a id="spanish" value="ES" href="#">ES</a></li>
+                        <li><a id="spanishTwo" value="ES" href="#">ES</a></li>
                         <li><a id="french" value="FR" href="#">FR</a></li>
                     </ul>
                 </div>
@@ -61,8 +62,8 @@
                         <div class="centerText">
                             <h1 class="welcome">Welcome to a Healthier World</h1>
                             <h3 class="onePatient">One Patient At a Time</h3>
-                            <a class="bigButtons waves-effect waves-light btn-large " id="connectDoc" href="#getStarted"><i
-                                    class="material-icons right">expand_more</i>Connect with your Doctor</a>
+                            <a class="bigButtons waves-effect waves-light btn-large "  href="#getStarted"><i
+                                    class="material-icons right">expand_more</i> <span id="connectDoc">Connect with your Doctor</span></a>
                         </div>
                     </div>
                 </div>
@@ -83,12 +84,12 @@
                         <form>
                             <div class="row">
                                 <div class="input-field col s6">
-                                    <input id="input_text" type="text" data-length="30">
-                                    <label class="label" id="locationForm" for="input_text"> City</label>
+                                    <input id="city" type="text" data-length="30">
+                                    <label class="label" for="city"> City</label>
                                 </div>
                                 <div class="input-field col s6">
-                                    <input id="input_text" type="text" data-length="30">
-                                    <label class="label" id="locationForm" for="input_text"><span id="ast">* </span> State (ie. CA)</label>
+                                    <input id="state" type="text" data-length="30">
+                                    <label class="label" for="state"><span id="ast">* </span> State (ie. CA)</label>
                                 </div>
                             </div>
                         </form>
@@ -148,7 +149,7 @@
                             <!-- submit button -->
                             <div class="col s5 m6 l6">
                                 <a class="bigButtons waves-effect waves-light btn-large submit-search"
-                                    id="search-submit"><i class="material-icons right">sort</i>Submit</a>
+                                    ><i class="material-icons right">sort</i> <span id="search-submit">Submit</span></a>
                             </div>
                         </div>
                     </div>
@@ -191,7 +192,7 @@
     </div>
     <div id="modal3" class="modal">
         <div class="modal-content">
-            <h4 class="red-text">Location required!</h4>
+            <h4 class="red-text">State required!</h4>
         </div>
     </div>
     <!--Footer-->
