@@ -257,7 +257,6 @@ $("#search-submit").on("click", function () {
                 div112.append(newDiv);
 
                 if ($("#home-page-lang").attr("lang") == "sp") { tranSp(); }
-                else if ($("#home-page-lang").attr("lang") == "sp") { tranFr(); }
 
             }
         }
