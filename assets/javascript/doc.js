@@ -30,17 +30,7 @@ $('a[href*="#"]')
                 $("html, body").animate({
                     scrollTop: target.offset().top
                 },
-                    800,
-                    function () {
-                        var $target = $(target);
-                        $target.focus();
-                        if ($target.is(":focus")) {
-                            return false;
-                        } else {
-                            $target.attr("tabindex", "-1");
-                            $target.focus(); // Set focus again
-                        }
-                    }
+                    800
                 );
             }
         }
