@@ -256,8 +256,12 @@ $("#search-submit").on("click", function () {
                 //$("#doctor-cards").append(newDiv);
                 div112.append(newDiv);
 
+<<<<<<< HEAD
                 if ($("html").attr("lang") == "sp") { tranSp(); }
                 
+=======
+                if ($("#home-page-lang").attr("lang") == "sp") { tranSp(); }
+>>>>>>> 30c6531ae65598a6ee579e9ec3f91bc8811ae602
 
             }
         }
