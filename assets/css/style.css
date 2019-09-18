@@ -93,6 +93,9 @@ nav ul a:hover {
   .centerText {
     margin-bottom: 200px;
   }
+  #search-submit{
+    margin-top: 20px;
+  }
 }
 /* favpage */
 .third-page{
