@@ -191,6 +191,7 @@ if (localStorage.getItem("favorites")) {  // if "favorites" key exists in localS
             newDiv1.append(newDiv11, newDiv12, newDiv13);
             newDiv.append(newDiv1);
             $("#favList").append(newDiv);
+            if ($("html").attr("lang") == "sp") { tranSp(); }
 
         }
 

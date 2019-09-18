@@ -73,7 +73,7 @@ function googleTranslateElementInit() {
     });    
     
     
-$("#home-page-lang").attr("lang", "Sp");
+$("html").attr("lang", "sp");
 
 }
 
