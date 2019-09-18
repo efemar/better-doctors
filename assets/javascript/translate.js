@@ -139,10 +139,10 @@ function googleTranslateElementInit() {
       $("#terms").text(data.data.translations[40].translatedText);
       /* doc card */
       /* $(".card-title").text(data.data.translations[40].translatedText); */
-      $(".lang").text(data.data.translations[43].translatedText);
-      $(".spec").text(data.data.translations[43].translatedText);
+      $(".lang").text(data.data.translations[41].translatedText);
+      $(".spec").text(data.data.translations[42].translatedText);
       $(".address").text(data.data.translations[43].translatedText);
-      $(".bio").text(data.data.translations[43].translatedText);
+      $(".bio").text(data.data.translations[44].translatedText);
     });    
     
     
