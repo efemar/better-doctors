@@ -116,8 +116,12 @@ $("#search-submit").on("click", function () {
         div11.addClass("row");
 
         var div111 = $("<div>");
-        div111.addClass("col l12 m12 s12");
-
+        //div111.addClass("col l12 m12 s12");
+        div111.addClass("col");
+        div111.addClass("l12");
+        div111.addClass("m12");
+        div111.addClass("s12");
+       
         var div112 = $("<div>");
         div112.addClass("row");
 
