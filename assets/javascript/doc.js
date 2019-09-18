@@ -76,12 +76,20 @@ $("#search-submit").on("click", function () {
         gender = "male";
     }
 
-    var location = $("#input_text").val().trim().toLowerCase();
+    var state = $("#state").val().trim().toLowerCase();
+    var city = $("#city").val().trim().toLowerCase();
+    var location;
 
-    if (!location) {
+    if (!state) {
         // show a modal to alert user and hide the modal after 2 seconds
         show_modal("modal3");
         setTimeout(function () { hide_modal("modal3"); }, 2000);
+        return false;
+    } else if (city) {
+        location = state + " " + city;
+        location = location.replace(/\s/g, "-");
+    } else {
+        location = state;
     }
 
     var specID = $("#spec-option").val().toLowerCase();
@@ -89,7 +97,7 @@ $("#search-submit").on("click", function () {
     var language = $("#lang-option").val();
 
     // queryURl with gender and location
-    var queryURL = "https://api.betterdoctor.com/2016-03-01/doctors?location=" + location + "&gender=" + gender + "&limit=6&user_key=f89971ab4d8b480630c107682513f5b8";
+    var queryURL = "https://api.betterdoctor.com/2016-03-01/doctors?location=" + location + "&gender=" + gender + "&limit=100&user_key=f89971ab4d8b480630c107682513f5b8";
     if (specID) {
         queryURL = queryURL + "&specialty_uid=" + specID;
     }
@@ -256,7 +264,7 @@ $("#search-submit").on("click", function () {
 
         $("#your-matches").append(div1);
         $(".tooltipped").tooltip();
-
+ 
     });
 });
 
