@@ -121,6 +121,7 @@ function hide_modal(modalID) {
 }
 
 
+// get data from localStorage and build doctor cards to display on fav.html page
 if (localStorage.getItem("favorites")) {  // if "favorites" key exists in localStorage
 
     var storage = JSON.parse(localStorage.getItem("favorites"));
@@ -135,6 +136,7 @@ if (localStorage.getItem("favorites")) {  // if "favorites" key exists in localS
             var languages = storage[i].languages;
             var specialties = storage[i].specialties;
             var address = storage[i].address;
+            var newAddress = address.replace(/\s/g, "+");
             var bio = storage[i].bio;
 
             var newDiv = $("<div>");
@@ -172,7 +174,7 @@ if (localStorage.getItem("favorites")) {  // if "favorites" key exists in localS
 
             var speEle = $("<p class = 'specFav'>Specialties: " + specialties + "</p>");
 
-            var addressEle = $("<p>Address: <a href='#'>" + address + "</a></p>");
+            var addressEle = $("<p>Address: <a href='https://www.google.com/maps/place/" + newAddress + "' target='_blank'>" + address + "</a></p>");
 
             newDiv12.append(nameEle, lanEle, speEle, addressEle);
 
