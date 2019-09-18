@@ -100,7 +100,7 @@ $("#spanishTwo").click(tranSp);
     url += "&q=" + escape($(".meet").text());
     /* alfredo *
     /* url += "&q=" + escape($(".alf").text()); */
-    url += "&q=" + escape($(".alfOne").text());
+    //url += "&q=" + escape($(".alfOne").text());
     /* elisa *
     url += "&q=" + escape($(".carmenSD").text());
     /* kobi *
